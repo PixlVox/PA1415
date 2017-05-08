@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Room">
+      <UniqueIdentifier>{684de633-cad3-4ef3-8ca0-36f2f26811be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Room">
+      <UniqueIdentifier>{be3932a5-cc1f-4055-8813-12283a2b6b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{ca1d7940-4f55-4151-9d4d-56ae0efbeef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{35a6709b-4b2d-41f2-9e64-d65fe7ee1633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Menu">
+      <UniqueIdentifier>{ba97e580-9dde-4f5d-9e79-1f7aec4a4211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menu">
+      <UniqueIdentifier>{21a17460-3fd3-4762-bf2d-2d3aa8141fd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameHandler">
+      <UniqueIdentifier>{92e5353f-ccc0-4da8-aac6-26a63098a0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameHandler">
+      <UniqueIdentifier>{9a2e7812-646b-4938-8bd4-dbb5e4f24f1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TwitterApi">
+      <UniqueIdentifier>{85290462-e461-4510-a392-16629b18d90d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TwitterApi">
+      <UniqueIdentifier>{b4d7eedc-ee5a-4b77-8d68-6c3bd7cecfe0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHandler.cpp">
+      <Filter>Source Files\GameHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="TwitterApi.cpp">
+      <Filter>Source Files\TwitterApi</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Room.h">
+      <Filter>Header Files\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHandler.h">
+      <Filter>Header Files\GameHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="TwitterApi.h">
+      <Filter>Header Files\TwitterApi</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
