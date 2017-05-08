@@ -1,3 +1,10 @@
-﻿  Main.cpp
-  NewTwitterNethack.vcxproj -> c:\users\teemu\documents\visual studio 2017\Projects\NewTwitterNethack\Debug\NewTwitterNethack.exe
-  NewTwitterNethack.vcxproj -> c:\users\teemu\documents\visual studio 2017\Projects\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+﻿  TwitterApi.cpp
+  Room.cpp
+  Player.cpp
+  Menu.cpp
+  Main.cpp
+  GameHandler.cpp
+  Generating Code...
+  LINK : C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe not found or not built by the last incremental link; performing full link
+  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
