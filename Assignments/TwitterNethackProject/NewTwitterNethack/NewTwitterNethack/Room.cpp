@@ -5,16 +5,19 @@ Room::Room() {
 
 	srand(static_cast<unsigned>(time(0)));
 
+	//Tiles
 	this->nrOfTiles = sf::Vector2i(30, 17);
 	this->tileSize = sf::Vector2i(64, 64);
 	this->roomLayout = 0;
-
+	this->textureType = 0;
 	this->tiles = nullptr;
 
+	//Vertex Array Setup
 	this->vertices.setPrimitiveType(sf::Quads);
 	this->vertices.resize((this->tileSize.x * this->tileSize.y) * 4);
 
-	this->textureType = 0;
+	//Room Objects
+	this->portal = nullptr;
 
 }
 
@@ -28,12 +31,13 @@ Room::~Room() {
 
 	delete[] this->tiles;
 
+	delete this->portal;
+
 }
 
 void Room::calculateTexture(void) {
 
 	this->textureType = rand() % 2 + 0;
-
 	this->texture.loadFromFile("Textures//Tiles//Tiles_" + std::to_string(this->textureType) + ".png");
 
 }
@@ -48,6 +52,7 @@ void Room::generateTiles() {
 
 	this->inFile.open("Rooms//Room_" + std::to_string(this->roomLayout) + ".txt");
 
+	//Create tiles
 	this->tiles = new int*[this->nrOfTiles.y];
 
 	for (int i = 0; i < this->nrOfTiles.y; i++) {
@@ -56,8 +61,8 @@ void Room::generateTiles() {
 
 	}
 
+	//Load tiles from text file
 	int strIndex = 0;
-
 	for (int i = 0; i < this->nrOfTiles.y; i++) {
 
 		std::getline(this->inFile, this->textureCoordsLine);
@@ -81,6 +86,7 @@ void Room::generateTiles() {
 
 void Room::loadVertexArray(void) {
 
+	//Setup VertexArray
 	for (int i = 0; i < this->nrOfTiles.y; i++) {
 
 		for (int j = 0; j < this->nrOfTiles.x; j++) {
@@ -108,12 +114,36 @@ void Room::loadVertexArray(void) {
 
 }
 
+void Room::setupPortal(void) {
+
+	//Find walkable tile for portal
+	int portalX = rand() % 30 + 0;
+	int portalY = rand() % 17 + 0;
+
+	while (this->tiles[portalY][portalX] != 1) {
+
+		portalX = rand() % 30 + 0;
+		portalY = rand() % 17 + 0;
+
+	}
+
+	portal = new Portal(portalX * 64, portalY * 64);
+
+}
+
 void Room::createRoom(void) {
 
 	this->calculateTexture();
 	this->calculateLayout();
 	this->generateTiles();
 	this->loadVertexArray();
+	this->setupPortal();
+
+}
+
+void Room::updateSprites(float deltaTime) {
+
+	portal->updateAnimation(deltaTime);
 
 }
 
@@ -130,5 +160,17 @@ void Room::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 int** Room::getTileMap(void) {
 
 	return this->tiles;
+
+}
+
+sf::Vector2i Room::getNrOfTiles(void) {
+
+	return this->nrOfTiles;
+
+}
+
+sf::RectangleShape Room::getPortal(void) {
+
+	return this->portal->getBody();
 
 }
