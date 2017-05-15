@@ -3,14 +3,10 @@
 
 #include"SFML\Graphics.hpp"
 
-class Player
+class Player : public sf::Drawable
 {
 private:
-<<<<<<< HEAD
-
-=======
 	//Texture stuff
->>>>>>> 13eb307efe7cb3ce23ff64981497cf7f9ff96b9a
 	sf::Texture texture;
 	sf::Sprite spriteSheet;
 	int spriteSheetWidth;
@@ -27,6 +23,7 @@ private:
 	//self explanatory
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 public:
+	Player();
 	Player(sf::Vector2f pos);
 
 	void update(float dt);

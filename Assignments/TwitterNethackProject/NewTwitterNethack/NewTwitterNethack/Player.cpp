@@ -4,6 +4,9 @@ void Player::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
 	target.draw(spriteSheet, states);
 }
+Player::Player()
+{
+}
 Player::Player(sf::Vector2f pos)
 {
 	//character sprite location

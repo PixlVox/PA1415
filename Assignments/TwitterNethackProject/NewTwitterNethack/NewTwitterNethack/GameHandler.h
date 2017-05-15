@@ -17,8 +17,10 @@ private:
 	int currentRoom;
 
 	bool showMenu;
+	int menuAnswer;
 
-	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
+	void updatePortalCollision();
+	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();
 
 protected:
