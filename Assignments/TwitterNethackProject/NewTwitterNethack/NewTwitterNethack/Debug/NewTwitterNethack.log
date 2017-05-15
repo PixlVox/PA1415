@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 ﻿  Item.cpp
 c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\item.cpp(6): warning C4129: 'I': unrecognized character escape sequence
 c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\item.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   LINK : C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe not found or not built by the last incremental link; performing full link
   NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+=======
+﻿  Main.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(18): warning C4101: 'tileMap': unreferenced local variable
+  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+>>>>>>> e80b33ee964916d0cdf844587142ca1f20e6879f

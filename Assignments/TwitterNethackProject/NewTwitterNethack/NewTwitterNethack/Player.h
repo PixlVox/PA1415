@@ -1,8 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+
 #include"SFML\Graphics.hpp"
 
-class Player
+class Player : public sf::Drawable
 {
 private:
 
@@ -14,6 +15,10 @@ private:
 	//Player movement
 	sf::Vector2f velocity;
 	float speed = 180.0f;
+	int movementBoundLeft;
+	int movementBoundRight;
+	int movementBoundDown;
+	int movementBoundUp;
 	
 	//Animation variables
 	float animationSpeed;
@@ -25,13 +30,16 @@ private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
-	
+	Player();
 	Player(sf::Vector2f pos);
 
 	//Get
 	sf::Sprite& getBody(void);
 
+	//Update
 	void update(float dt);
+	void updateMovementBounds(int left, int right, int top, int bottom);
 
 };
 #endif // !PLAYER_H
+
