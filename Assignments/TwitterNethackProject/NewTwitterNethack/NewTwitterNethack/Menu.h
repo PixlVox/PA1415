@@ -11,6 +11,7 @@ private:
 	
 	int current;
 	int done;
+
 	void updateHighlight();
 	int detectKey();
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;

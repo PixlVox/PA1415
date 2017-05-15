@@ -13,12 +13,13 @@ private:
 	Player player;
 	Menu menu;
 
-	int nrOfRooms;
 	int currentRoom;
-
+	sf::Vector2f plOrigPos;
 	bool showMenu;
 	int menuAnswer;
 
+	void setPlayerPos();
+	void dueMenu();
 	void updatePortalCollision();
 	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();

@@ -26,11 +26,7 @@ private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
-<<<<<<< HEAD
 	Player();
-=======
-	
->>>>>>> 31c05921707b0126050f5b40ad668fda2bed8dfb
 	Player(sf::Vector2f pos);
 
 	//Get
