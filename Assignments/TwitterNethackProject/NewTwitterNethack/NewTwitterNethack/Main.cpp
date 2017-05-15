@@ -13,9 +13,6 @@ int main() {
 	sf::Vector2i nrOfTiles(30, 17);
 	sf::Vector2i currentTile(15, 7);
 
-	sf::RectangleShape player;
-	player.setSize(sf::Vector2f(50.0f, 50.0f));
-	player.setFillColor(sf::Color::Red);
 
 	while (window.isOpen()) {
 
@@ -41,36 +38,12 @@ int main() {
 
 				room = new Room();
 				room->createRoom();
-				tileMap = room->getTileMap();
-				player.setPosition((15 * 64), (7 * 64));
-
+				tileMap = room->getTileMap();				
 			}
 
 		}
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-
-			player.move(0.0f, -5.0f);
-
-		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-			
-			player.move(0.0f, 5.0f);
-
-		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-
-			player.move(-5.0f, 0.0f);
-
-		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-
-			player.move(5.0f, 0.0f);
-
-		}
-
-		updateCurrentTile(player.getPosition(), currentTile);
-
+	
 		window.clear();
 
 		if (room != nullptr) {
@@ -78,8 +51,6 @@ int main() {
 			window.draw(*room);
 
 		}
-
-		window.draw(player);
 
 		window.display();
 
