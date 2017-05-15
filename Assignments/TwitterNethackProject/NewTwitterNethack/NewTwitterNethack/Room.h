@@ -44,6 +44,7 @@ public:
 	//Get
 	int** getTileMap(void);
 	sf::Vector2i getNrOfTiles(void);
+	sf::Vector2i getRandomWalkableTile(void);
 	sf::RectangleShape getPortal(void);
 
 	//Update
@@ -51,6 +52,7 @@ public:
 
 	//Misc
 	void createRoom(void);
+	void drawObjects(sf::RenderWindow& window);
 
 };
 

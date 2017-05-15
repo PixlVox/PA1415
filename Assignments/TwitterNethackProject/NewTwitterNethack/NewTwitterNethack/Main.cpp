@@ -7,9 +7,12 @@ void updateCurrentTile(sf::Vector2f playerPos, sf::Vector2i& currentTile);
 
 int main() {
 
+	//Setup window
 	sf::RenderWindow window(sf::VideoMode(1920, 1080) , "TwitterNethack", sf::Style::Fullscreen);
 	window.setFramerateLimit(60);
+	window.setMouseCursorVisible(false);
 
+	//Temp
 	Room* room = nullptr;
 	Player player(sf::Vector2f((64 * 15), (64 * 7)));
 	int** tileMap;
@@ -18,15 +21,17 @@ int main() {
 
 	bool collisionPortal = false;
 
+	//Deltatime
 	sf::Clock deltaClock;
 	float deltaTime = 0.0f;
 
 	while (window.isOpen()) {
 
+		//Update deltaTime
 		deltaTime = deltaClock.restart().asSeconds();
 
+		//Handle events
 		sf::Event event;
-
 		while (window.pollEvent(event)) {
 
 			if (event.type == sf::Event::Closed) {
@@ -35,6 +40,7 @@ int main() {
 
 			}
 
+			//Temp
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) || collisionPortal) {
 
 				if (room != nullptr) {
@@ -46,12 +52,15 @@ int main() {
 				room = new Room();
 				room->createRoom();
 
+				player.getBody().setPosition(sf::Vector2f(room->getRandomWalkableTile().x * 64.0f,
+					room->getRandomWalkableTile().y * 64.0f));
 				collisionPortal = false;
 
 			}
 
 		}
 
+		//Temp
 		if (room != nullptr) {
 
 			if (player.getBody().getGlobalBounds().intersects(room->getPortal().getGlobalBounds())) {
@@ -64,12 +73,14 @@ int main() {
 
 		player.update(deltaTime);
 
+		//Window update screen
 		window.clear();
 
+		//Temp
 		if (room != nullptr) {
 
 			window.draw(*room);
-			window.draw(room->getPortal());
+			room->drawObjects(window);
 			room->updateSprites(deltaTime);
 
 		}

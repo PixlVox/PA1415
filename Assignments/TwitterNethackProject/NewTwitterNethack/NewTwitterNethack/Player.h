@@ -29,7 +29,7 @@ public:
 	Player(sf::Vector2f pos);
 
 	//Get
-	sf::Sprite getBody(void);
+	sf::Sprite& getBody(void);
 
 	void update(float dt);
 
