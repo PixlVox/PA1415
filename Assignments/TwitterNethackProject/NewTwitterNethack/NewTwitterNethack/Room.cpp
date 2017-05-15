@@ -18,6 +18,9 @@ Room::Room() {
 
 	//Room Objects
 	this->portal = nullptr;
+	this->items = nullptr;
+
+	this->createRoom();
 
 }
 
@@ -118,6 +121,12 @@ void Room::setupPortal(void) {
 
 	sf::Vector2i tile = this->getRandomWalkableTile();
 	portal = new Portal(tile.x * 64, tile.y * 64);
+
+}
+
+void Room::generateItems(void) {
+
+
 
 }
 
