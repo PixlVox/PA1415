@@ -3,11 +3,15 @@
 #include "SFML\Graphics.hpp"
 class Item : public sf::Drawable {
 protected:
+
 	sf::Sprite itemSprite;
 	sf::Texture itemTexture;
 	sf::Vector2i position;
+	
 	bool isOnFloor;
+
 public:
+
 	Item();
 	Item(int roomWidth, int roomHeight);
 	Item(int roomWidth, int roomHeight, bool isOnFloor);
@@ -17,7 +21,10 @@ public:
 	int getX();
 	int getY();
 	void setIsOnFloor(bool isOnFloor);
+
 private:
+
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
 };
 #endif // !1

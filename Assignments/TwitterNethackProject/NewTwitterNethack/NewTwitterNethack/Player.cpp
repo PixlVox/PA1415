@@ -33,6 +33,9 @@ Player::Player(sf::Vector2f pos)
 
 void Player::update(float dt)
 {
+	velocity.x = 0.0f;
+	velocity.y = 0.0f;
+
 	// Handle input from arrow keys and update direction and animation
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
@@ -58,8 +61,15 @@ void Player::update(float dt)
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 3;
 	}
+	else {
+
+		velocity.y = 0;
+		velocity.x = 0;
+
+	}
 	spriteSheet.move(velocity * speed* dt);
 
+	//Animation stuff
 	if (keyFrameDuration >= animationSpeed)
 	{
 		currentKeyFrame.x++;
@@ -73,7 +83,7 @@ void Player::update(float dt)
 	}
 }
 
-sf::Sprite Player::getBody(void) {
+sf::Sprite& Player::getBody(void) {
 
 	return this->spriteSheet;
 

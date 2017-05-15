@@ -18,6 +18,9 @@ Room::Room() {
 
 	//Room Objects
 	this->portal = nullptr;
+	this->items = nullptr;
+
+	this->createRoom();
 
 }
 
@@ -116,18 +119,14 @@ void Room::loadVertexArray(void) {
 
 void Room::setupPortal(void) {
 
-	//Find walkable tile for portal
-	int portalX = rand() % 30 + 0;
-	int portalY = rand() % 17 + 0;
+	sf::Vector2i tile = this->getRandomWalkableTile();
+	portal = new Portal(tile.x * 64, tile.y * 64);
 
-	while (this->tiles[portalY][portalX] != 1) {
+}
 
-		portalX = rand() % 30 + 0;
-		portalY = rand() % 17 + 0;
+void Room::generateItems(void) {
 
-	}
 
-	portal = new Portal(portalX * 64, portalY * 64);
 
 }
 
@@ -154,6 +153,29 @@ void Room::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 	states.texture = &this->texture;
 
 	target.draw(this->vertices, states);
+
+}
+
+void Room::drawObjects(sf::RenderWindow& window) {
+
+	window.draw(this->portal->getBody());
+
+}
+
+sf::Vector2i Room::getRandomWalkableTile(void) {
+
+	//Find walkable tile
+	int tileX = rand() % 30 + 0;
+	int tileY = rand() % 17 + 0;
+
+	while (this->tiles[tileY][tileX] != 1) {
+
+		tileX = rand() % 30 + 0;
+		tileY = rand() % 17 + 0;
+
+	}
+
+	return sf::Vector2i(tileX, tileY);
 
 }
 
