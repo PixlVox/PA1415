@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Room.cpp
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -17,3 +18,10 @@ c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwit
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(188): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+=======
+﻿  Item.cpp
+GameHandler.obj : error LNK2019: unresolved external symbol "public: class sf::Vector2<float> __thiscall Room::getRandomWalkableTile(void)" (?getRandomWalkableTile@Room@@QAE?AV?$Vector2@M@sf@@XZ) referenced in function "private: void __thiscall GameHandler::setPlayerPos(void)" (?setPlayerPos@GameHandler@@AAEXXZ)
+GameHandler.obj : error LNK2019: unresolved external symbol "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ) referenced in function "public: __thiscall GameHandler::GameHandler(void)" (??0GameHandler@@QAE@XZ)
+GameHandler.obj : error LNK2019: unresolved external symbol "public: class sf::Sprite & __thiscall Player::getBody(void)" (?getBody@Player@@QAEAAVSprite@sf@@XZ) referenced in function "private: void __thiscall GameHandler::setPlayerPos(void)" (?setPlayerPos@GameHandler@@AAEXXZ)
+C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe : fatal error LNK1120: 3 unresolved externals
+>>>>>>> 57dd6aef084fe16370949c99b528dc134b8175bc
