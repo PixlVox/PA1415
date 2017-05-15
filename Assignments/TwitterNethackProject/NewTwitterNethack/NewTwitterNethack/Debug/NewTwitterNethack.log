@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 ﻿  Item.cpp
 c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\item.cpp(6): warning C4129: 'I': unrecognized character escape sequence
 c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\item.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+=======
+<<<<<<< HEAD
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+=======
+﻿  Main.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(16): warning C4101: 'tileMap': unreferenced local variable
+  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+>>>>>>> dbc052e419355b1e39f3948b26aba8abfbb145e7
+>>>>>>> fdb80812e0a57716e59d693f9053efb5cade78cc

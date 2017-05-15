@@ -1,9 +1,10 @@
 #ifndef ROOM_H
 #define ROOM_H
 
-#include "Portal.h"
-#include <string>
-#include <fstream>
+#include"Portal.h"
+#include"Item.h"
+#include<string>
+#include<fstream>
 
 class Room : public sf::Drawable, public sf::Transformable{
 
@@ -26,15 +27,20 @@ private:
 
 	//Obligatory Object
 	Portal* portal;
+	Item* items;
 
 	//Private functions
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+	//Calls on every other setup function(private functions below)
+	void createRoom(void);
 
 	void calculateTexture();
 	void calculateLayout(void);
 	void generateTiles(void);
 	void loadVertexArray(void);
 	void setupPortal(void);
+	void generateItems(void);
 
 public:
 
@@ -44,13 +50,14 @@ public:
 	//Get
 	int** getTileMap(void);
 	sf::Vector2i getNrOfTiles(void);
+	sf::Vector2i getRandomWalkableTile(void);
 	sf::RectangleShape getPortal(void);
 
 	//Update
 	void updateSprites(float deltaTime);
 
 	//Misc
-	void createRoom(void);
+	void drawObjects(sf::RenderWindow& window);
 
 };
 
