@@ -5,13 +5,33 @@
 class Player
 {
 private:
+
+	//Texture stuff
 	sf::Texture texture;
-	sf::Sprite sprite;
+	sf::Sprite spriteSheet;
+	int spriteSheetWidth;
+
+	//Player movement
+	sf::Vector2f velocity;
+	float speed = 180.0f;
+	
+	//Animation variables
+	float animationSpeed;
+	float keyFrameDuration;
+	sf::Vector2i currentKeyFrame;
+	sf::Vector2i keyFrameSize;
+
+	//self explanatory
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
+	
 	Player(sf::Vector2f pos);
 
-	void update();
+	//Get
+	sf::Sprite getBody(void);
+
+	void update(float dt);
 
 };
 #endif // !PLAYER_H

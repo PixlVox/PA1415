@@ -16,6 +16,8 @@ Room::Room() {
 
 	this->textureType = 0;
 
+	this->portal = nullptr;
+
 }
 
 Room::~Room() {
@@ -27,6 +29,8 @@ Room::~Room() {
 	}
 
 	delete[] this->tiles;
+
+	delete this->portal;
 
 }
 
@@ -108,12 +112,35 @@ void Room::loadVertexArray(void) {
 
 }
 
+void Room::setupPortal(void) {
+
+	int portalX = rand() % 30 + 0;
+	int portalY = rand() % 17 + 0;
+
+	while (this->tiles[portalY][portalX] != 1) {
+
+		portalX = rand() % 30 + 0;
+		portalY = rand() % 17 + 0;
+
+	}
+
+	portal = new Portal(portalX * 64, portalY * 64);
+
+}
+
 void Room::createRoom(void) {
 
 	this->calculateTexture();
 	this->calculateLayout();
 	this->generateTiles();
 	this->loadVertexArray();
+	this->setupPortal();
+
+}
+
+void Room::updateSprites(float deltaTime) {
+
+	portal->updateAnimation(deltaTime);
 
 }
 
@@ -130,5 +157,17 @@ void Room::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 int** Room::getTileMap(void) {
 
 	return this->tiles;
+
+}
+
+sf::Vector2i Room::getNrOfTiles(void) {
+
+	return this->nrOfTiles;
+
+}
+
+sf::RectangleShape Room::getPortal(void) {
+
+	return this->portal->getBody();
 
 }
