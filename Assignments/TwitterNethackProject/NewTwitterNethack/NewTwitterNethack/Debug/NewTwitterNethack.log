@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
-=======
-﻿  Room.cpp
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(98): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(107): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(108): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(109): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Portal.cpp
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\portal.cpp(11): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Player.cpp
-  Main.cpp
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(15): warning C4101: 'tileMap': unreferenced local variable
-  Generating Code...
-  Compiling...
-  GameHandler.cpp
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.h(20): warning C4094: untagged 'class' declared no symbols
-  Generating Code...
-  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
-  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
->>>>>>> 31c05921707b0126050f5b40ad668fda2bed8dfb
+﻿  Item.cpp
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\item.cpp(6): warning C4129: 'I': unrecognized character escape sequence
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\item.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)

@@ -5,7 +5,8 @@ class Item : public sf::Drawable {
 protected:
 	sf::Sprite itemSprite;
 	sf::Texture itemTexture;
-	sf::Vector2i position;
+	int xPos;
+	int yPos;
 	bool isOnFloor;
 public:
 	Item();
