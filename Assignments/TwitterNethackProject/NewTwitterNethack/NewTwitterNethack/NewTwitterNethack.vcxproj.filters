@@ -37,11 +37,17 @@
     <Filter Include="Source Files\GameHandler">
       <UniqueIdentifier>{9a2e7812-646b-4938-8bd4-dbb5e4f24f1c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\TwitterApi">
-      <UniqueIdentifier>{85290462-e461-4510-a392-16629b18d90d}</UniqueIdentifier>
+    <Filter Include="Header Files\Inventory">
+      <UniqueIdentifier>{50e73142-094d-4da9-9b2b-ea8123c26dfb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\TwitterApi">
-      <UniqueIdentifier>{b4d7eedc-ee5a-4b77-8d68-6c3bd7cecfe0}</UniqueIdentifier>
+    <Filter Include="Header Files\Items">
+      <UniqueIdentifier>{89967eb5-7b0e-4e4c-8e8d-d1b9404a336a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Inventory">
+      <UniqueIdentifier>{ba935574-bb8c-414a-b356-f39c53abfb9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Items">
+      <UniqueIdentifier>{18397439-3e9a-4f8e-a1ce-b16a45dbb5c8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,14 +60,20 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Source Files\Menu</Filter>
-    </ClCompile>
     <ClCompile Include="GameHandler.cpp">
       <Filter>Source Files\GameHandler</Filter>
     </ClCompile>
-    <ClCompile Include="TwitterApi.cpp">
-      <Filter>Source Files\TwitterApi</Filter>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Portal.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\Menu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,8 +89,14 @@
     <ClInclude Include="GameHandler.h">
       <Filter>Header Files\GameHandler</Filter>
     </ClInclude>
-    <ClInclude Include="TwitterApi.h">
-      <Filter>Header Files\TwitterApi</Filter>
+    <ClInclude Include="Inventory.h">
+      <Filter>Header Files\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Portal.h">
+      <Filter>Header Files\Room</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
