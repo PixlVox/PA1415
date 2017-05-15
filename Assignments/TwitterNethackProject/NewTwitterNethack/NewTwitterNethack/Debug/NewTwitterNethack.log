@@ -1,4 +1,19 @@
-﻿  Main.cpp
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(18): warning C4101: 'tileMap': unreferenced local variable
+﻿  Room.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(109): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(180): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(168): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(169): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(185): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(186): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(188): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)

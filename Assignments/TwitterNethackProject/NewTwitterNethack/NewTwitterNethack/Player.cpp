@@ -51,14 +51,16 @@ void Player::update(float dt)
 		currentKeyFrame.y = 1;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)
-		&& this->spriteSheet.getPosition().x < this->movementBoundRight)
-	{
+		&& (this->spriteSheet.getPosition().x + this->spriteSheet.getGlobalBounds().width)
+		< this->movementBoundRight)
+	{		
 		velocity.x = 1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 2;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)
-		&& this->spriteSheet.getPosition().y > this->movementBoundDown)
+		&& (this->spriteSheet.getPosition().y + this->spriteSheet.getGlobalBounds().height)
+		< this->movementBoundDown)
 	{
 		velocity.y = 1.0f;
 		keyFrameDuration += dt;
