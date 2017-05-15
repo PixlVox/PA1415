@@ -1,10 +1,11 @@
-﻿  TwitterApi.cpp
-  Room.cpp
-  Player.cpp
-  Menu.cpp
-  Main.cpp
-  GameHandler.cpp
-  Generating Code...
-  LINK : C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe not found or not built by the last incremental link; performing full link
+﻿  Room.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(87): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(88): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
