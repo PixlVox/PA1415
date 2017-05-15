@@ -1,18 +1,5 @@
 <<<<<<< HEAD
 ﻿  Room.cpp
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(87): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(88): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
-  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
-=======
-<<<<<<< HEAD
-﻿  Room.cpp
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -38,4 +25,3 @@ GameHandler.obj : error LNK2019: unresolved external symbol "public: __thiscall 
 GameHandler.obj : error LNK2019: unresolved external symbol "public: class sf::Sprite & __thiscall Player::getBody(void)" (?getBody@Player@@QAEAAVSprite@sf@@XZ) referenced in function "private: void __thiscall GameHandler::setPlayerPos(void)" (?setPlayerPos@GameHandler@@AAEXXZ)
 C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe : fatal error LNK1120: 3 unresolved externals
 >>>>>>> 57dd6aef084fe16370949c99b528dc134b8175bc
->>>>>>> 7b962871ece929bca3fc06326c98d764d8a13109

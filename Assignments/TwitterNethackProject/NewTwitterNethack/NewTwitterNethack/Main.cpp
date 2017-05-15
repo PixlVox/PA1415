@@ -3,24 +3,6 @@
 #include "Portal.h"
 #include"Item.h"
 #include <iostream>
-<<<<<<< HEAD
-#include "Room.h"
-
-int main() {
-
-	sf::RenderWindow window(sf::VideoMode(1920, 1080) , "TwitterNethack", sf::Style::Fullscreen);
-	window.setFramerateLimit(60);
-
-	Room room;
-
-	room.generateTiles();
-	room.loadVertexArray();
-
-	while (window.isOpen()) {
-
-		sf::Event event;
-
-=======
 
 void updateCurrentTile(sf::Vector2f playerPos, sf::Vector2i& currentTile);
 void updatePlayerBounds(int** tileMap, sf::Vector2i& currentTile, Player& player, sf::RectangleShape* rects);
@@ -62,7 +44,6 @@ int main() {
 
 		//Handle events
 		sf::Event event;
->>>>>>> 7b962871ece929bca3fc06326c98d764d8a13109
 		while (window.pollEvent(event)) {
 
 			if (event.type == sf::Event::Closed) {
@@ -71,13 +52,6 @@ int main() {
 
 			}
 
-<<<<<<< HEAD
-		}
-
-		window.clear();
-
-		window.draw(room);
-=======
 			if (event.type == sf::Event::KeyPressed)
 			{
 				if (event.key.code == sf::Keyboard::Escape)
@@ -153,7 +127,6 @@ int main() {
 		}
 
 		window.draw(player.getBody());
->>>>>>> 7b962871ece929bca3fc06326c98d764d8a13109
 
 		window.display();
 

@@ -1,17 +1,10 @@
 #ifndef ROOM_H
 #define ROOM_H
 
-<<<<<<< HEAD
-#include "SFML\Graphics.hpp"
-#include <iostream>
-#include <fstream>
-#include <string>
-=======
 #include"Portal.h"
 #include"Item.h"
 #include<string>
 #include<fstream>
->>>>>>> 7b962871ece929bca3fc06326c98d764d8a13109
 
 class Room : public sf::Drawable, public sf::Transformable{
 
@@ -20,20 +13,6 @@ private:
 	//Graphics
 	sf::VertexArray vertices;
 	sf::Texture texture;
-<<<<<<< HEAD
-	
-	//Tiles Texture Coords
-	sf::Vector2i** tilesTextureCoords;
-	std::string textureCoordsLine;
-	std::ifstream inFile;
-
-	//Tiles values
-	sf::Vector2i nrOfTiles;
-	sf::Vector2i tileSize;
-
-	//Tiles collision array
-	int** tilesCollision;
-=======
 	int textureType;
 	
 	//Tiles / Texture Coords
@@ -41,7 +20,6 @@ private:
 	std::string textureCoordsLine;
 	std::ifstream inFile;
 	int roomLayout;
->>>>>>> 7b962871ece929bca3fc06326c98d764d8a13109
 
 	//Tiles values
 	sf::Vector2i nrOfTiles;
