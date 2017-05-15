@@ -18,7 +18,7 @@ private:
 
 public:
 
-	Portal(int x, int y);
+	Portal(sf::Vector2f pos);
 	~Portal();
 
 	//Get

@@ -50,10 +50,8 @@ int main() {
 				}
 
 				room = new Room();
-				room->createRoom();
 
-				player.getBody().setPosition(sf::Vector2f(room->getRandomWalkableTile().x * 64.0f,
-					room->getRandomWalkableTile().y * 64.0f));
+				player.getBody().setPosition(room->getRandomWalkableTile());
 				collisionPortal = false;
 
 			}
