@@ -119,8 +119,7 @@ void Room::loadVertexArray(void) {
 
 void Room::setupPortal(void) {
 
-	sf::Vector2i tile = this->getRandomWalkableTile();
-	portal = new Portal(tile.x * 64, tile.y * 64);
+	portal = new Portal(this->getRandomWalkableTile());
 
 }
 
@@ -162,7 +161,7 @@ void Room::drawObjects(sf::RenderWindow& window) {
 
 }
 
-sf::Vector2i Room::getRandomWalkableTile(void) {
+sf::Vector2f Room::getRandomWalkableTile(void) {
 
 	//Find walkable tile
 	int tileX = rand() % 30 + 0;
@@ -175,7 +174,10 @@ sf::Vector2i Room::getRandomWalkableTile(void) {
 
 	}
 
-	return sf::Vector2i(tileX, tileY);
+	tileX *= 64;
+	tileY *= 64;
+
+	return sf::Vector2f(tileX, tileY);
 
 }
 

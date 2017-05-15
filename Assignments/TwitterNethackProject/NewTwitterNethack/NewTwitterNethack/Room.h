@@ -50,7 +50,7 @@ public:
 	//Get
 	int** getTileMap(void);
 	sf::Vector2i getNrOfTiles(void);
-	sf::Vector2i getRandomWalkableTile(void);
+	sf::Vector2f getRandomWalkableTile(void);
 	sf::RectangleShape getPortal(void);
 
 	//Update
