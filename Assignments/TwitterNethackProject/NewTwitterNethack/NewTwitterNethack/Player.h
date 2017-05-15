@@ -1,8 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+
 #include"SFML\Graphics.hpp"
 
-class Player
+class Player : public sf::Drawable
 {
 private:
 
@@ -29,7 +30,7 @@ private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
-	
+	Player();
 	Player(sf::Vector2f pos);
 
 	//Get
@@ -41,3 +42,4 @@ public:
 
 };
 #endif // !PLAYER_H
+
