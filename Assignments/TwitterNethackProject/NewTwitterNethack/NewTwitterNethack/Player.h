@@ -15,6 +15,10 @@ private:
 	//Player movement
 	sf::Vector2f velocity;
 	float speed = 180.0f;
+	int movementBoundLeft;
+	int movementBoundRight;
+	int movementBoundDown;
+	int movementBoundUp;
 	
 	//Animation variables
 	float animationSpeed;
@@ -32,7 +36,9 @@ public:
 	//Get
 	sf::Sprite& getBody(void);
 
+	//Update
 	void update(float dt);
+	void updateMovementBounds(int left, int right, int top, int bottom);
 
 };
 #endif // !PLAYER_H

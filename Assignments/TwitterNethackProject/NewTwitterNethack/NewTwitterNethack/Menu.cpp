@@ -12,7 +12,7 @@ void Menu::updateHighlight()
 	}
 }
 
-int Menu::detectKey()
+void Menu::detectKey()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{

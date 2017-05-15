@@ -6,20 +6,18 @@ protected:
 
 	sf::Sprite itemSprite;
 	sf::Texture itemTexture;
-	sf::Vector2i position;
-	
+	float xPos;
+	float yPos;
 	bool isOnFloor;
 
 public:
 
 	Item();
-	Item(int roomWidth, int roomHeight);
-	Item(int roomWidth, int roomHeight, bool isOnFloor);
-	void setPosition(int x, int y);
-	void setPosition(sf::Vector2i position);
-	sf::Vector2i getPosition();
-	int getX();
-	int getY();
+	Item(float roomWidth, float roomHeight);
+	Item(float roomWidth, float roomHeight, bool isOnFloor);
+	void setPosition(float x, float y);
+	void setPosition(const sf::Vector2f position);
+	sf::Vector2f getPosition();
 	void setIsOnFloor(bool isOnFloor);
 
 private:
