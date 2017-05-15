@@ -34,14 +34,15 @@ void Portal::updateAnimation(float deltaTime) {
 	this->timer += deltaTime;
 
 	if (this->timer >= 0.25f) {
-		
+
+		currentFrameX++;
+
 		if (this->currentFrameX >= this->nrOfFramesX) {
 
 			this->currentFrameX = 0;
 
 		}
 
-		currentFrameX++;
 		this->body.setTextureRect(sf::IntRect((64 * this->currentFrameX), 0, 64, 64));
 		this->timer = 0.0f;
 
