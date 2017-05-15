@@ -1,7 +1,9 @@
 #include "Player.h"
 #include<iostream>
-void Player::draw(sf::RenderTarget & target, sf::RenderStates states) const
+
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
+
 	target.draw(spriteSheet, states);
 }
 Player::Player(sf::Vector2f pos)
@@ -66,4 +68,10 @@ void Player::update(float dt)
 			currentKeyFrame.y * keyFrameSize.y, keyFrameSize.x, keyFrameSize.y));
 		keyFrameDuration = 0.0f;
 	}
+}
+
+sf::Sprite Player::getBody(void) {
+
+	return this->spriteSheet;
+
 }
