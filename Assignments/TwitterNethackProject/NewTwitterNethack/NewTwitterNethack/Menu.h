@@ -13,7 +13,7 @@ private:
 	int done;
 
 	void updateHighlight();
-	int detectKey();
+	void detectKey();
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 protected:
 
