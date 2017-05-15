@@ -1,8 +1,17 @@
 #include "GameHandler.h"
 
+void GameHandler::reset()
+{
+	this->currentRoom = 0;
+	this->rooms.clear();
+	this->player = Player();
+	this->generateRoom();
+	this->setPlayerPos();
+}
+
 void GameHandler::setPlayerPos()
 {
-	this->player.getBody().setPosition(this->rooms[this->currentRoom]);
+	this->player.getBody().setPosition(this->rooms[this->currentRoom]->getRandomWalkableTile());
 }
 
 void GameHandler::dueMenu()
@@ -11,14 +20,9 @@ void GameHandler::dueMenu()
 	{
 		if (this->menuAnswer)
 		{
-			this->rooms.clear();
-			this->rooms.push_back(new Room());
-			this->player = Player();
+			this->reset();
 		}
-		else
-		{
-			this->showMenu = false;
-		}
+		this->showMenu = false;
 	}
 }
 
@@ -57,7 +61,6 @@ GameHandler::GameHandler()
 	this->currentRoom = 0;
 	this->menuAnswer = 0;
 	this->showMenu = true;
-	this->player = Player(sf::Vector2f(250, 250));
 	this->generateRoom();
 	this->setPlayerPos();
 }

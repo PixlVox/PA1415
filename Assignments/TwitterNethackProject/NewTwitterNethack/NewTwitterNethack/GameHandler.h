@@ -18,6 +18,7 @@ private:
 	bool showMenu;
 	int menuAnswer;
 
+	void reset();
 	void setPlayerPos();
 	void dueMenu();
 	void updatePortalCollision();
