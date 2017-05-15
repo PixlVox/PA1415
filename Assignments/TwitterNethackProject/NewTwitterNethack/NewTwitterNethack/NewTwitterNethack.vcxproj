@@ -104,11 +104,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-<<<<<<< HEAD
       <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-=======
       <AdditionalIncludeDirectories>C:\Users\hem\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
->>>>>>> fb8f51b831f84ca34855755a53638a6ed50bcb59
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,11 +140,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-<<<<<<< HEAD
       <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-=======
       <AdditionalIncludeDirectories>C:\Users\hem\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
->>>>>>> fb8f51b831f84ca34855755a53638a6ed50bcb59
+
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

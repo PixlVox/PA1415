@@ -5,22 +5,28 @@
 #include"Player.h"
 #include"Menu.h"
 
-class GameHandler
+class GameHandler : public sf::Drawable
 {
 
 private:
 	std::vector<Room*> rooms;
-	Room *roomPtr;
 	Player player;
 	Menu menu;
+
 	int nrOfRooms;
+	int currentRoom;
+
+	bool showMenu;
+
+	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
+	void detectKey();
 
 protected:
 
 
 public:
 	GameHandler();
-
+	void update(float dt);
 	void generateRoom();
 
 
