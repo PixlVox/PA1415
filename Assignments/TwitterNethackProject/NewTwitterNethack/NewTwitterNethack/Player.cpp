@@ -20,6 +20,7 @@ Player::Player(sf::Vector2f pos)
 
 	currentKeyFrame = sf::Vector2i(0, 0);
 	keyFrameSize = sf::Vector2i(32, 32);
+	spriteSheet.setPosition(pos);
 	spriteSheetWidth = 4;
 	animationSpeed = 0.2f;
 	keyFrameDuration = 0.0f;
@@ -52,6 +53,8 @@ void Player::update(float dt)
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 3;
 	}
+	spriteSheet.move(velocity * speed* dt);
+
 	if (keyFrameDuration >= animationSpeed)
 	{
 		currentKeyFrame.x++;

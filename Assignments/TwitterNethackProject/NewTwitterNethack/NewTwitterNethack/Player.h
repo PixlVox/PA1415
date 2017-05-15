@@ -12,7 +12,7 @@ private:
 
 	//Player movement
 	sf::Vector2f velocity;
-
+	float speed = 180.0f;
 	//Animation variables
 	float animationSpeed;
 	float keyFrameDuration;
