@@ -6,13 +6,8 @@ protected:
 
 	sf::Sprite itemSprite;
 	sf::Texture itemTexture;
-<<<<<<< HEAD
 	int xPos;
 	int yPos;
-=======
-	sf::Vector2i position;
-	
->>>>>>> fdb80812e0a57716e59d693f9053efb5cade78cc
 	bool isOnFloor;
 
 public:
