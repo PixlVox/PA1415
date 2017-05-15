@@ -55,6 +55,12 @@ void Player::update(float dt)
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 3;
 	}
+	else {
+
+		velocity.y = 0;
+		velocity.x = 0;
+
+	}
 	spriteSheet.move(velocity * speed* dt);
 
 	if (keyFrameDuration >= animationSpeed)
@@ -70,7 +76,7 @@ void Player::update(float dt)
 	}
 }
 
-sf::Sprite Player::getBody(void) {
+sf::Sprite& Player::getBody(void) {
 
 	return this->spriteSheet;
 
