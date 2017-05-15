@@ -63,6 +63,9 @@
     <ClCompile Include="TwitterApi.cpp">
       <Filter>Source Files\TwitterApi</Filter>
     </ClCompile>
+    <ClCompile Include="Portal.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Room.h">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="TwitterApi.h">
       <Filter>Header Files\TwitterApi</Filter>
+    </ClInclude>
+    <ClInclude Include="Portal.h">
+      <Filter>Header Files\Room</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

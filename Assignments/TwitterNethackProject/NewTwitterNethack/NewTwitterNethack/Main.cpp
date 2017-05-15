@@ -1,4 +1,5 @@
 #include "Room.h"
+#include "Portal.h"
 #include <iostream>
 
 void updateCurrentTile(sf::Vector2f playerPos, sf::Vector2i& currentTile);
@@ -14,12 +15,18 @@ int main() {
 	sf::Vector2i currentTile(15, 7);
 
 	sf::RectangleShape player;
+	player.setPosition((15 * 64), (7 * 64));
 	player.setSize(sf::Vector2f(50.0f, 50.0f));
 	player.setFillColor(sf::Color::Red);
 
+	bool collisionPortal = false;
+
+	sf::Clock deltaClock;
+	float deltaTime = 0.0f;
+
 	while (window.isOpen()) {
 
-		std::cout << "X: " << currentTile.x << "Y: " << currentTile.y << std::endl;
+		deltaTime = deltaClock.restart().asSeconds();
 
 		sf::Event event;
 
@@ -31,7 +38,7 @@ int main() {
 
 			}
 
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) || collisionPortal) {
 
 				if (room != nullptr) {
 
@@ -42,7 +49,8 @@ int main() {
 				room = new Room();
 				room->createRoom();
 				tileMap = room->getTileMap();
-				player.setPosition((15 * 64), (7 * 64));
+
+				collisionPortal = false;
 
 			}
 
@@ -69,6 +77,16 @@ int main() {
 
 		}
 
+		if (room != nullptr) {
+
+			if (player.getGlobalBounds().intersects(room->getPortal().getGlobalBounds())) {
+
+				collisionPortal = true;
+
+			}
+
+		}
+
 		updateCurrentTile(player.getPosition(), currentTile);
 
 		window.clear();
@@ -76,6 +94,8 @@ int main() {
 		if (room != nullptr) {
 
 			window.draw(*room);
+			window.draw(room->getPortal());
+			room->updateSprites(deltaTime);
 
 		}
 

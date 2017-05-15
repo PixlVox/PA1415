@@ -1,7 +1,7 @@
 #ifndef ROOM_H
 #define ROOM_H
 
-#include "SFML\Graphics.hpp"
+#include "Portal.h"
 #include <string>
 #include <fstream>
 
@@ -24,6 +24,9 @@ private:
 	sf::Vector2i nrOfTiles;
 	sf::Vector2i tileSize;
 
+	//Obligatory Object
+	Portal* portal;
+
 	//Private functions
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
@@ -31,6 +34,7 @@ private:
 	void calculateLayout(void);
 	void generateTiles(void);
 	void loadVertexArray(void);
+	void setupPortal(void);
 
 public:
 
@@ -39,6 +43,11 @@ public:
 
 	//Get
 	int** getTileMap(void);
+	sf::Vector2i getNrOfTiles(void);
+	sf::RectangleShape getPortal(void);
+
+	//Update
+	void updateSprites(float deltaTime);
 
 	//Misc
 	void createRoom(void);
