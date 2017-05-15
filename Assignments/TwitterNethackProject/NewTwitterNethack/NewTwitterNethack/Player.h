@@ -6,14 +6,30 @@
 class Player
 {
 private:
+<<<<<<< HEAD
 
+=======
+	//Texture stuff
+>>>>>>> 13eb307efe7cb3ce23ff64981497cf7f9ff96b9a
 	sf::Texture texture;
-	sf::Sprite sprite;
+	sf::Sprite spriteSheet;
+	int spriteSheetWidth;
 
+	//Player movement
+	sf::Vector2f velocity;
+
+	//Animation variables
+	float animationSpeed;
+	float keyFrameDuration;
+	sf::Vector2i currentKeyFrame;
+	sf::Vector2i keyFrameSize;
+
+	//self explanatory
+	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 public:
 	Player(sf::Vector2f pos);
 
-	void update();
+	void update(float dt);
 
 };
 #endif // !PLAYER_H
