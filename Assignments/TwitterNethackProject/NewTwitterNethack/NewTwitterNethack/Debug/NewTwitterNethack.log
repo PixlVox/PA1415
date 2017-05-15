@@ -1,4 +1,21 @@
-﻿  Main.cpp
+﻿  Room.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(98): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(107): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(108): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(109): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Portal.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\portal.cpp(11): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Player.cpp
+  Main.cpp
 c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(15): warning C4101: 'tileMap': unreferenced local variable
+  Generating Code...
+  Compiling...
+  GameHandler.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.h(20): warning C4094: untagged 'class' declared no symbols
+  Generating Code...
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
