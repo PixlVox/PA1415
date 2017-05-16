@@ -30,7 +30,7 @@ private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
-	Player();
+
 	Player(sf::Vector2f pos);
 
 	//Get

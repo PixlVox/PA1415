@@ -1,1 +1,33 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  Room.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(109): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(180): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Portal.cpp
+  Player.cpp
+  Menu.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(53): warning C4129: 'M': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(53): warning C4129: 'N': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(57): warning C4129: 'M': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(57): warning C4129: 'E': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(61): warning C4129: 'M': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(61): warning C4129: 'B': unrecognized character escape sequence
+  Item.cpp
+  Inventory.cpp
+  GameHandler.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.cpp(97): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.cpp(98): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Main.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(170): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(171): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(189): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'

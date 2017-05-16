@@ -33,28 +33,30 @@ void GameHandler::reset(){
 
 }
 
-void GameHandler::dueMenu(){
-
-	if (this->menuAnswer != -1){
-
-		if (this->menuAnswer){
-
+void GameHandler::dueMenu(int nr)
+{
+	if (nr != -1)
+	{
+		if (nr)
+		{
 			this->reset();
-		
-		}
-		
+		}	
 		this->showMenu = false;
-	
 	}
 }
 
-void GameHandler::updatePortalCollision(){
+bool GameHandler::updatePortalCollision(){
+
+	bool collision = false;
 
 	if (this->player->getBody().getGlobalBounds().intersects(this->room->getPortal().getGlobalBounds())){
 
 		this->generateRoom();
-	
+		collision = true;
+
 	}
+
+	return collision;
 
 }
 
@@ -66,27 +68,28 @@ void GameHandler::draw(sf::RenderTarget &target, sf::RenderStates states) const{
 	
 	}
 <<<<<<< HEAD
-	else
-	{
-		target.draw(this->player, states);
-		target.draw(*this->rooms[this->currentRoom], states);
-		//Item/Inventory
-		target.draw(this->bitchBall, states);
-=======
 	else{
 
 		//target.draw(*this->player, states);
 		target.draw(*this->room, states);
 	
->>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
+=======
+	else
+	{
+
+		//Item/Inventory
+		target.draw(this->bitchBall, states);
+		//target.draw(*this->player, states);
+		target.draw(*this->room, states);
+>>>>>>> 5129f5d5786642ca1c0fd7cb2705288b74f735ee
 	}
 
 }
 
 void GameHandler::drawObjects(sf::RenderWindow& window) {
 
-	window.draw(this->player->getBody());
 	this->room->drawObjects(window);
+	window.draw(this->player->getBody());
 
 }
 
@@ -102,46 +105,42 @@ void GameHandler::detectKey(){
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && !this->showMenu){
 
-		//this->showMenu = true;
+		this->showMenu = true;
 
 	}
 }
 
-void GameHandler::update(float dt)
-{
+void GameHandler::update(float dt) {
 	if (this->showMenu) {
 
 		//Update menu if it's open
 		this->menuAnswer = this->menu.update();
 
 	}
-	else{
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::K)) {
-
-			delete this->room;
-			this->generateRoom();
-
-		}
+	else
+	{
 
 		//Open menu(Check for input)
 		this->detectKey();
 
 		//Update player
 		this->player->update(dt);
-		std::cout << "Player Pos: " << this->player->getBody().getPosition().x << " " << this->player->getBody().getPosition().y << std::endl;
 
 		//Update the players movement bounds
 		this->updatePlayerBounds();
 
 		//Check for collision with the portal
-		this->updatePortalCollision();
+			if (this->updatePortalCollision())
+			{
 
+				this->player->newPosition(this->room->getRandomWalkableTile());
+
+			}
 	}
-
 }
 
-void GameHandler::generateRoom(){
+void GameHandler::generateRoom()
+{
 
 	if (this->room != nullptr) {
 

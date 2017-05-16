@@ -1,6 +1,10 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
 <<<<<<< HEAD
+Debug|Win32|C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\|
+=======
+<<<<<<< HEAD
 Debug|Win32|C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\|
 =======
 Debug|Win32|C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\|
 >>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
+>>>>>>> 2fb162709a996192a6a0bccf78c8176946b9f88a

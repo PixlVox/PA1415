@@ -8,11 +8,10 @@ class Menu : public sf::Drawable
 private:
 	sf::Texture menuTexture;
 	sf::Sprite menuSprite[2];
-	
+	sf::RectangleShape background;
 	int current;
 	int done;
 
-	void updateHighlight();
 	void detectKey();
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 protected:
