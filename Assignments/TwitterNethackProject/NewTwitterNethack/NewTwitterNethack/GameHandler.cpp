@@ -48,13 +48,18 @@ void GameHandler::dueMenu(){
 	}
 }
 
-void GameHandler::updatePortalCollision(){
+bool GameHandler::updatePortalCollision(){
+
+	bool collision = false;
 
 	if (this->player->getBody().getGlobalBounds().intersects(this->room->getPortal().getGlobalBounds())){
 
 		this->generateRoom();
-	
+		collision = true;
+
 	}
+
+	return collision;
 
 }
 
@@ -106,25 +111,21 @@ void GameHandler::update(float dt)
 	}
 	else{
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::K)) {
-
-			delete this->room;
-			this->generateRoom();
-
-		}
-
 		//Open menu(Check for input)
 		this->detectKey();
 
 		//Update player
 		this->player->update(dt);
-		std::cout << "Player Pos: " << this->player->getBody().getPosition().x << " " << this->player->getBody().getPosition().y << std::endl;
 
 		//Update the players movement bounds
 		this->updatePlayerBounds();
 
 		//Check for collision with the portal
-		this->updatePortalCollision();
+		if (this->updatePortalCollision()) {
+
+			this->player->newPosition(this->room->getRandomWalkableTile());
+
+		}
 
 	}
 

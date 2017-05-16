@@ -22,7 +22,7 @@ private:
 	//Private functions
 	void reset();
 	void dueMenu();
-	void updatePortalCollision();
+	bool updatePortalCollision();
 	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();
 	void updatePlayerBounds(void);
