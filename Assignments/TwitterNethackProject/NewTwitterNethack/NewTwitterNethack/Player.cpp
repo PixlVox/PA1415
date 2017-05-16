@@ -42,6 +42,8 @@ void Player::update(float dt)
 	velocity.x = 0.0f;
 	velocity.y = 0.0f;
 
+	bool moving = false;
+
 	// Handle input from arrow keys and update direction and animation
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)
 		&& this->spriteSheet.getPosition().x > this->movementBoundLeft)
@@ -49,36 +51,44 @@ void Player::update(float dt)
 		velocity.x = -1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 1;
+		moving = true;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)
+	
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)
 		&& (this->spriteSheet.getPosition().x + this->spriteSheet.getGlobalBounds().width)
 		< this->movementBoundRight)
 	{		
 		velocity.x = 1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 2;
+		moving = true;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)
 		&& (this->spriteSheet.getPosition().y + this->spriteSheet.getGlobalBounds().height)
 		< this->movementBoundDown)
 	{
 		velocity.y = 1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 0;
+		moving = true;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)
 		&& this->spriteSheet.getPosition().y > this->movementBoundUp)
 	{
 		velocity.y = -1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 3;
+		moving = true;
 	}
-	else {
 
-		velocity.y = 0;
-		velocity.x = 0;
+	if (!moving) {
 
+		this->velocity.x = 0.0f;
+		this->velocity.y = 0.0f;
 	}
+	
 	spriteSheet.move(velocity * speed* dt);
 
 	//Animation stuff

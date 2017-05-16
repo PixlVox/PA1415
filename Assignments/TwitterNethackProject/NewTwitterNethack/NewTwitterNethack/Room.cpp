@@ -40,7 +40,7 @@ Room::~Room() {
 
 void Room::calculateTexture(void) {
 
-	this->textureType = rand() % 2 + 0;
+	this->textureType = rand() % 3 + 0;
 	this->texture.loadFromFile("Textures//Tiles//Tiles_" + std::to_string(this->textureType) + ".png");
 
 }

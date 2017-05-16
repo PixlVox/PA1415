@@ -73,6 +73,8 @@ int main() {
 				room = new Room();
 				tileMap = room->getTileMap();
 
+				system("cls");
+
 				for (int i = 0; i < 17; i++) {
 
 					std::cout << "\n";
@@ -183,8 +185,11 @@ void updatePlayerBounds(int** tileMap, sf::Vector2i& currentTile, Player& player
 	player.updateMovementBounds(left, right, top, bottom);
 	
 	rects[0].setPosition(left, currentTile.y * 64);
+
 	rects[1].setPosition(right, currentTile.y * 64);
+
 	rects[2].setPosition(currentTile.x * 64, top);
+
 	rects[3].setPosition(currentTile.x * 64, bottom);
 
 }
