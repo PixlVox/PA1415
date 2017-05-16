@@ -67,20 +67,13 @@ void GameHandler::draw(sf::RenderTarget &target, sf::RenderStates states) const{
 		target.draw(this->menu, states);
 	
 	}
-<<<<<<< HEAD
 	else
 	{
-		target.draw(this->player, states);
-		target.draw(*this->rooms[this->currentRoom], states);
+
 		//Item/Inventory
 		target.draw(this->bitchBall, states);
-=======
-	else{
-
 		//target.draw(*this->player, states);
 		target.draw(*this->room, states);
-	
->>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
 	}
 
 }
@@ -116,7 +109,8 @@ void GameHandler::update(float dt) {
 		this->menuAnswer = this->menu.update();
 
 	}
-	else {
+	else
+	{
 
 		//Open menu(Check for input)
 		this->detectKey();
@@ -128,16 +122,12 @@ void GameHandler::update(float dt) {
 		this->updatePlayerBounds();
 
 		//Check for collision with the portal
-<<<<<<< HEAD
-		this->updatePortalCollision();
-=======
-		if (this->updatePortalCollision()) {
+			if (this->updatePortalCollision())
+			{
 
-			this->player->newPosition(this->room->getRandomWalkableTile());
+				this->player->newPosition(this->room->getRandomWalkableTile());
 
-		}
-
->>>>>>> 2fb162709a996192a6a0bccf78c8176946b9f88a
+			}
 	}
 }
 
