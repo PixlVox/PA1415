@@ -34,7 +34,6 @@ int main() {
 		}
 
 		gameOutput = game.update(deltaTime);
-		game.updateSprites(deltaTime);
 
 		//Window update screen
 		window.clear();

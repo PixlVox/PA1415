@@ -8,6 +8,13 @@ Inventory::Inventory(){
 	this->invSprite.setTextureRect(sf::IntRect(0, 0, 128, 384));
 
 	this->items = new Item*[3];
+	this->nrOfItems = 0;
+
+	for (int i = 0; i < 3; i++) {
+
+		this->items[i] = nullptr;
+
+	}
 
 	//set position
 	this->xPos = 32.0f;

@@ -144,6 +144,9 @@ int GameHandler::update(float dt) {
 		//Update player
 		this->player->update(dt);
 
+		//Update Sprite
+		this->updateSprites(dt);
+
 		//Check for collision with items
 		this->itemCollision();
 
