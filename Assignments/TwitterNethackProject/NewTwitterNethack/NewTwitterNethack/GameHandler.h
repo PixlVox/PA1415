@@ -3,7 +3,6 @@
 
 #include"Room.h"
 #include"Player.h"
-#include "Item.h"
 #include"Menu.h"
 
 class GameHandler : public sf::Drawable
@@ -15,20 +14,15 @@ private:
 	Player* player;
 	Menu menu;
 
-	//Item/Inventory
-	Item bitchBall;
-
 	sf::Vector2i playerCurrentPos;
 	int** tileMap;
 	bool showMenu;
-	int menuAnswer;
+	float menuTimer;
 
 	//Private functions
 	void reset();
-
-	void dueMenu(int nr);
-
 	bool updatePortalCollision();
+	void itemCollision(void);
 	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();
 	void updatePlayerBounds(void);
@@ -39,7 +33,7 @@ public:
 	GameHandler();
 
 	//Update
-	void update(float dt);
+	int update(float dt);
 	void updateSprites(float deltaTime);
 
 	//Draw

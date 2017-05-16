@@ -10,6 +10,7 @@ int main() {
 	window.setMouseCursorVisible(false);
 
 	GameHandler game;
+	int gameOutput = 1;
 
 	//Deltatime
 	sf::Clock deltaClock;
@@ -24,7 +25,7 @@ int main() {
 		sf::Event event;
 		while (window.pollEvent(event)) {
 
-			if (event.type == sf::Event::Closed) {
+			if (event.type == sf::Event::Closed || gameOutput < 1) {
 
 				window.close();
 
@@ -32,7 +33,7 @@ int main() {
 
 		}
 
-		game.update(deltaTime);
+		gameOutput = game.update(deltaTime);
 		game.updateSprites(deltaTime);
 
 		//Window update screen

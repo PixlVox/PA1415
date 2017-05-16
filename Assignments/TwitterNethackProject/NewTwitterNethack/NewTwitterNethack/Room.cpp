@@ -1,5 +1,4 @@
 #include "Room.h"
-#include <iostream>
 
 Room::Room() {
 
@@ -20,6 +19,16 @@ Room::Room() {
 	this->portal = nullptr;
 	this->items = nullptr;
 
+	//Item variables
+	this->nrOfItems = rand() % 3 + 0;
+	this->items = new Item*[this->nrOfItems];
+
+	for (int i = 0; i < this->nrOfItems; i++) {
+
+		this->items[i] = new Item();
+
+	}
+
 	this->createRoom();
 
 }
@@ -35,6 +44,18 @@ Room::~Room() {
 	delete[] this->tiles;
 
 	delete this->portal;
+
+	for (int i = 0; i < this->nrOfItems; i++) {
+
+		if (this->items[i] != nullptr) {
+
+			delete this->items[i];
+
+		}
+
+	}
+
+	delete[] this->items;
 
 }
 
@@ -124,8 +145,12 @@ void Room::setupPortal(void) {
 }
 
 void Room::generateItems(void) {
+	
+	for (int i = 0; i < this->nrOfItems; i++) {
 
+		this->items[i]->setPosition(this->getRandomWalkableTile());
 
+	}
 
 }
 
@@ -136,6 +161,7 @@ void Room::createRoom(void) {
 	this->generateTiles();
 	this->loadVertexArray();
 	this->setupPortal();
+	this->generateItems();
 
 }
 
@@ -159,6 +185,16 @@ void Room::drawObjects(sf::RenderWindow& window) {
 
 	window.draw(this->portal->getBody());
 
+	for (int i = 0; i < this->nrOfItems; i++) {
+
+		if (this->items[i] != nullptr) {
+
+			window.draw(this->items[i]->getBody());
+
+		}
+
+	}
+
 }
 
 sf::Vector2f Room::getRandomWalkableTile(void) const{
@@ -178,6 +214,18 @@ sf::Vector2f Room::getRandomWalkableTile(void) const{
 	tileY *= 64;
 
 	return sf::Vector2f(tileX, tileY);
+
+}
+
+int Room::getNrOfItems(void) const{
+
+	return this->nrOfItems;
+
+}
+
+Item** Room::getItems(void) const{
+
+	return this->items;
 
 }
 
