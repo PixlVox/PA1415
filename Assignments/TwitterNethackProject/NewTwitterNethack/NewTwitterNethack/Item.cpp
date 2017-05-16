@@ -3,7 +3,7 @@
 Item::Item() {
 
 	//set Texture
-	this->itemTexture.loadFromFile("Textures/Items/bathumball.png");
+	this->itemTexture.loadFromFile("Textures//Items//bathumball.png");
 	this->itemSprite.setTexture(this->itemTexture);
 
 	//set position
@@ -15,7 +15,7 @@ Item::Item() {
 Item::Item(float roomWidth, float roomHeight)
 {
 	//set Texture
-	this->itemTexture.loadFromFile("Textures/Items/bathumball.png");
+	this->itemTexture.loadFromFile("Textures//Items//bathumball.png");
 	this->itemSprite.setTexture(this->itemTexture);
 
 	//set position
@@ -27,7 +27,7 @@ Item::Item(float roomWidth, float roomHeight)
 Item::Item(float roomWidth, float roomHeight, bool isOnFloor)
 {
 	//set Texture
-	this->itemTexture.loadFromFile("Textures/Items/bathumball.png");
+	this->itemTexture.loadFromFile("Textures//Items//bathumball.png");
 	this->itemSprite.setTexture(this->itemTexture);
 
 	//set position

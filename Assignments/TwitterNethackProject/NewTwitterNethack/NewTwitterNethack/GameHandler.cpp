@@ -63,12 +63,17 @@ GameHandler::GameHandler()
 	this->showMenu = true;
 	this->generateRoom();
 	this->setPlayerPos();
+
 }
 
 void GameHandler::update(float dt)
 {
+
+	this->updatePlayerBounds();
+
 	this->detectKey();
 	this->player.update(dt);
+	void updatePlayerBounds(void);
 	this->updatePortalCollision();
 	if (this->showMenu)
 	{
@@ -78,5 +83,32 @@ void GameHandler::update(float dt)
 
 void GameHandler::generateRoom()
 {
+
+	//Create room
 	this->rooms.push_back(new Room());
+
+	//Set Tilemap
+	this->tileMap = this->rooms[this->currentRoom]->getTileMap();
+}
+
+void GameHandler::updatePlayerBounds() {
+
+	//Update player indexed positon
+	this->playerCurrentPos.x = (this->player.getBody().getPosition().x / 64);
+	this->playerCurrentPos.y = (this->player.getBody().getPosition().y / 64);
+	
+	int left = (this->playerCurrentPos.x - 
+		this->tileMap[this->playerCurrentPos.x][this->playerCurrentPos.y]) * 64;
+
+	int right = (this->playerCurrentPos.x +
+		this->tileMap[this->playerCurrentPos.x][this->playerCurrentPos.y]) * 64;
+
+	int top = (this->playerCurrentPos.y -
+		this->tileMap[this->playerCurrentPos.x][this->playerCurrentPos.y]) * 64;
+
+	int bottom = (this->playerCurrentPos.y +
+		this->tileMap[this->playerCurrentPos.x][this->playerCurrentPos.y]) * 64;
+
+	this->player.updateMovementBounds(left, right, top, bottom);
+
 }
