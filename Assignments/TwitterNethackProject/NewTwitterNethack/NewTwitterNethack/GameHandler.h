@@ -3,6 +3,7 @@
 #include<vector>
 #include"Room.h"
 #include"Player.h"
+#include "Item.h"
 #include"Menu.h"
 
 class GameHandler : public sf::Drawable
@@ -12,6 +13,9 @@ private:
 	std::vector<Room*> rooms;
 	Player player;
 	Menu menu;
+
+	//Item/Inventory
+	Item bitchBall;
 
 	int currentRoom;
 	sf::Vector2f plOrigPos;
