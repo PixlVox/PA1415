@@ -23,11 +23,15 @@ public:
 	Inventory();
 	void update(float dt);
 	void addItem(Item &item);
+	
 	int getNrOfItems();
+
+	void emptyInventory();
+
 	sf::Sprite& getItemBodies(int index);
 
-	//Item& dropItem();
-	//Item& dropItem(int index);
+	Item &dropItem();
+	Item &dropItem(int index);
 
 };
 #endif // !INVENTORY_H

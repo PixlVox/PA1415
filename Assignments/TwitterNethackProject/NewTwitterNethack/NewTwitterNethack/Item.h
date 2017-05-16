@@ -23,7 +23,7 @@ public:
 	void setPosition(sf::Vector2f position);
 	sf::Vector2f getPosition();
 	void setIsOnFloor(bool isOnFloor);
-	sf::Sprite getBody(void);
+	sf::Sprite& getBody(void);
 
 private:
 
