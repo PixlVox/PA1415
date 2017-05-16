@@ -1,17 +1,5 @@
 #include "Menu.h"
 
-void Menu::updateHighlight()
-{
-	if (this->current == 0)
-	{
-		this->menuSprite[2].setPosition(sf::Vector2f(0, 0)); 
-	}
-	else
-	{
-		this->menuSprite[2].setPosition(sf::Vector2f(1, 1));
-	}
-}
-
 void Menu::detectKey()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
@@ -46,6 +34,7 @@ void Menu::draw(sf::RenderTarget & target, sf::RenderStates states) const
 	{
 		target.draw(var, states);
 	}
+	target.draw(this->background, states);
 }
 
 Menu::Menu()
@@ -62,6 +51,9 @@ Menu::Menu()
 	this->menuSprite[2].setTexture(this->menuTexture);
 	this->menuSprite[2].setPosition(sf::Vector2f(400, 350));
 
+	this->background.setSize(sf::Vector2f(1920, 1080));
+	this->background.setFillColor(sf::Color::Black);
+
 	this->current = 0;
 	this->done = -1;
 }
@@ -73,6 +65,5 @@ int Menu::update()
 		this->done = -1;
 	}
 	this->detectKey();
-	this->updateHighlight();
 	return this->done;
 }

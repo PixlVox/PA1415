@@ -14,11 +14,11 @@ void GameHandler::setPlayerPos()
 	this->player.getBody().setPosition(this->rooms[this->currentRoom]->getRandomWalkableTile());
 }
 
-void GameHandler::dueMenu()
+void GameHandler::dueMenu(int nr)
 {
-	if (this->menuAnswer != -1)
+	if (nr != -1)
 	{
-		if (this->menuAnswer)
+		if (nr)
 		{
 			this->reset();
 		}
@@ -58,9 +58,11 @@ void GameHandler::detectKey()
 
 GameHandler::GameHandler()
 {
+	this->tileMap = nullptr;
 	this->currentRoom = 0;
 	this->menuAnswer = 0;
-	this->showMenu = true;
+	this->showMenu = false;
+	this->menu = Menu();
 	this->generateRoom();
 	this->setPlayerPos();
 
@@ -69,15 +71,16 @@ GameHandler::GameHandler()
 void GameHandler::update(float dt)
 {
 
-	this->updatePlayerBounds();
-
-	this->detectKey();
-	this->player.update(dt);
-	void updatePlayerBounds(void);
-	this->updatePortalCollision();
 	if (this->showMenu)
 	{
-		this-> menuAnswer =	this->menu.update();
+		this->dueMenu(this->menu.update());
+	}
+	else
+	{
+		this->updatePlayerBounds();
+		this->detectKey();
+		this->player.update(dt);
+		this->updatePortalCollision();
 	}
 }
 

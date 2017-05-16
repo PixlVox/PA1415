@@ -88,12 +88,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-main-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -103,11 +103,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-main-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -119,14 +120,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\Teemu\Documents\Visual Studio 2017\Projects\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-main-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,13 +139,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-main-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

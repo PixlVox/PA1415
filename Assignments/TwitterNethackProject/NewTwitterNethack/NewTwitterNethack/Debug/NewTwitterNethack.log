@@ -1,3 +1,34 @@
-﻿  Player.cpp
-  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
-  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+﻿  Room.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(109): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\room.cpp(180): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Portal.cpp
+  Player.cpp
+  Menu.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(53): warning C4129: 'M': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(53): warning C4129: 'N': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(57): warning C4129: 'M': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(57): warning C4129: 'E': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(61): warning C4129: 'M': unrecognized character escape sequence
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\menu.cpp(61): warning C4129: 'B': unrecognized character escape sequence
+  Item.cpp
+  Inventory.cpp
+  GameHandler.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.cpp(97): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.cpp(98): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Main.cpp
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(170): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(171): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(189): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\klorinmannen\documents\visual studio 2015\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  NewTwitterNethack.vcxproj -> C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\klorinmannen\Documents\Visual Studio 2015\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
