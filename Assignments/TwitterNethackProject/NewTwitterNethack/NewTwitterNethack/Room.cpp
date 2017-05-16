@@ -161,7 +161,7 @@ void Room::drawObjects(sf::RenderWindow& window) {
 
 }
 
-sf::Vector2f Room::getRandomWalkableTile(void) {
+sf::Vector2f Room::getRandomWalkableTile(void) const{
 
 	//Find walkable tile
 	int tileX = rand() % 30 + 0;
@@ -181,20 +181,26 @@ sf::Vector2f Room::getRandomWalkableTile(void) {
 
 }
 
-int** Room::getTileMap(void) {
+int** Room::getTileMap(void) const{
 
 	return this->tiles;
 
 }
 
-sf::Vector2i Room::getNrOfTiles(void) {
+sf::Vector2i Room::getNrOfTiles(void) const{
 
 	return this->nrOfTiles;
 
 }
 
-sf::RectangleShape Room::getPortal(void) {
+sf::RectangleShape Room::getPortal(void) const{
 
 	return this->portal->getBody();
+
+}
+
+sf::Vector2i Room::getTileSize(void) const{
+
+	return this->tileSize;
 
 }

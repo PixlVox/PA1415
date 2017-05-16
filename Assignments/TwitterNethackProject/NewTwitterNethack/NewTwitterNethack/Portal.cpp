@@ -49,3 +49,4 @@ void Portal::updateAnimation(float deltaTime) {
 	}
 
 }
+

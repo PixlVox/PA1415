@@ -3,7 +3,7 @@
 
 #include"SFML\Graphics.hpp"
 
-class Portal {
+class Portal{
 
 private:
 
@@ -15,6 +15,8 @@ private:
 	float timer;
 	int nrOfFramesX;
 	int currentFrameX;
+
+	
 
 public:
 
