@@ -9,11 +9,17 @@ Inventory::Inventory(){
 
 	this->items = new Item*[3];
 	this->nrOfItems = 0;
+<<<<<<< HEAD
 
 	for (int i = 0; i < 3; i++) {
 
 		this->items[i] = nullptr;
 
+=======
+	for (size_t i = 0; i < 3; i++)
+	{
+		this->items[i] = nullptr;
+>>>>>>> d9b672789654e729f994e3664bf9bb52c3500a1e
 	}
 
 	//set position
