@@ -33,27 +33,15 @@ void GameHandler::reset(){
 
 }
 
-<<<<<<< HEAD
 void GameHandler::dueMenu(int nr)
 {
 	if (nr != -1)
 	{
 		if (nr)
 		{
-=======
-void GameHandler::dueMenu(){
-
-	if (this->menuAnswer != -1){
-
-		if (this->menuAnswer){
-
->>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
 			this->reset();
-		
-		}
-		
+		}	
 		this->showMenu = false;
-	
 	}
 }
 
@@ -90,21 +78,9 @@ void GameHandler::drawObjects(sf::RenderWindow& window) {
 
 }
 
-<<<<<<< HEAD
-GameHandler::GameHandler()
-{
-	this->tileMap = nullptr;
-	this->currentRoom = 0;
-	this->menuAnswer = 0;
-	this->showMenu = false;
-	this->menu = Menu();
-	this->generateRoom();
-	this->setPlayerPos();
-=======
 void GameHandler::updateSprites(float deltaTime) {
 
 	this->room->updateSprites(deltaTime);
->>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
 
 }
 
@@ -112,20 +88,19 @@ void GameHandler::detectKey(){
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && !this->showMenu){
 
-		//this->showMenu = true;
+		this->showMenu = true;
 
 	}
 }
 
-void GameHandler::update(float dt)
-{
+void GameHandler::update(float dt) {
 	if (this->showMenu) {
 
 		//Update menu if it's open
 		this->menuAnswer = this->menu.update();
 
 	}
-	else{
+	else {
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::K)) {
 
@@ -144,27 +119,13 @@ void GameHandler::update(float dt)
 		//Update the players movement bounds
 		this->updatePlayerBounds();
 
-<<<<<<< HEAD
-	if (this->showMenu)
-	{
-		this->dueMenu(this->menu.update());
-	}
-	else
-	{
-		this->updatePlayerBounds();
-		this->detectKey();
-		this->player.update(dt);
-		this->updatePortalCollision();
-=======
 		//Check for collision with the portal
 		this->updatePortalCollision();
-
->>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
 	}
-
 }
 
-void GameHandler::generateRoom(){
+void GameHandler::generateRoom()
+{
 
 	if (this->room != nullptr) {
 
