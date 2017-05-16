@@ -1,34 +1,34 @@
 #include "Player.h"
 #include<iostream>
 
-void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
-{
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 
-	target.draw(spriteSheet, states);
+	target.draw(this->spriteSheet, states);
+
 }
-Player::Player()
-{
-}
-Player::Player(sf::Vector2f pos)
-{
+
+Player::Player(sf::Vector2f pos){
+
 	//character sprite location
 	sf::String fileName = "../NewTwitterNethack/Textures/Characters/player1.png";
 
 	// Load texture, set it to the sprite and set what part of the sprite sheet to draw.
-	if (!texture.loadFromFile(fileName))
-	{
+	if (!this->texture.loadFromFile(fileName)){
+
 		// Handle error: Print error message.
 		std::cout << "ERROR: Player image could not be loaded.\n---" << std::endl;
+	
 	}
-	spriteSheet.setTexture(texture);
-	spriteSheet.setTextureRect(sf::IntRect(0, 0, 32, 32));
 
-	currentKeyFrame = sf::Vector2i(0, 0);
-	keyFrameSize = sf::Vector2i(32, 32);
-	spriteSheet.setPosition(pos);
-	spriteSheetWidth = 4;
-	animationSpeed = 0.2f;
-	keyFrameDuration = 0.0f;
+	this->spriteSheet.setTexture(texture);
+	this->spriteSheet.setTextureRect(sf::IntRect(0, 0, 32, 32));
+
+	this->currentKeyFrame = sf::Vector2i(0, 0);
+	this->keyFrameSize = sf::Vector2i(32, 32);
+	this->spriteSheet.setPosition(pos);
+	this->spriteSheetWidth = 4;
+	this->animationSpeed = 0.2f;
+	this->keyFrameDuration = 0.0f;
 
 	this->movementBoundDown = 0;
 	this->movementBoundLeft = 0;
@@ -37,17 +37,17 @@ Player::Player(sf::Vector2f pos)
 
 }
 
-void Player::update(float dt)
-{
-	velocity.x = 0.0f;
-	velocity.y = 0.0f;
+void Player::update(float dt){
+	
+	this->velocity.x = 0.0f;
+	this->velocity.y = 0.0f;
 
 	bool moving = false;
 
 	// Handle input from arrow keys and update direction and animation
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)
-		&& this->spriteSheet.getPosition().x > this->movementBoundLeft)
-	{
+		&& this->spriteSheet.getPosition().x > this->movementBoundLeft){
+
 		velocity.x = -1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 1;
@@ -56,8 +56,8 @@ void Player::update(float dt)
 	
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)
 		&& (this->spriteSheet.getPosition().x + this->spriteSheet.getGlobalBounds().width)
-		< this->movementBoundRight)
-	{		
+		< this->movementBoundRight){
+
 		velocity.x = 1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 2;
@@ -66,43 +66,50 @@ void Player::update(float dt)
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)
 		&& (this->spriteSheet.getPosition().y + this->spriteSheet.getGlobalBounds().height)
-		< this->movementBoundDown)
-	{
+		< this->movementBoundDown){
+
 		velocity.y = 1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 0;
 		moving = true;
+	
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)
-		&& this->spriteSheet.getPosition().y > this->movementBoundUp)
-	{
+		&& this->spriteSheet.getPosition().y > this->movementBoundUp){
+
 		velocity.y = -1.0f;
 		keyFrameDuration += dt;
 		currentKeyFrame.y = 3;
 		moving = true;
 	}
 
-	if (!moving) {
+	if (!moving){
 
 		this->velocity.x = 0.0f;
 		this->velocity.y = 0.0f;
 	}
 	
-	spriteSheet.move(velocity * speed* dt);
+	this->spriteSheet.move(this->velocity * this->speed* dt);
 
 	//Animation stuff
-	if (keyFrameDuration >= animationSpeed)
-	{
-		currentKeyFrame.x++;
+	if (this->keyFrameDuration >= this->animationSpeed) {
 
-		if (currentKeyFrame.x >= spriteSheetWidth)
-			currentKeyFrame.x = 0;
+		this->currentKeyFrame.x++;
 
-		spriteSheet.setTextureRect(sf::IntRect(currentKeyFrame.x * keyFrameSize.x,
-			currentKeyFrame.y * keyFrameSize.y, keyFrameSize.x, keyFrameSize.y));
-		keyFrameDuration = 0.0f;
+		if (this->currentKeyFrame.x >= this->spriteSheetWidth) {
+
+			this->currentKeyFrame.x = 0;
+
+		}
+
+		this->spriteSheet.setTextureRect(sf::IntRect((this->currentKeyFrame.x * this->keyFrameSize.x),
+			(this->currentKeyFrame.y * this->keyFrameSize.y), this->keyFrameSize.x, this->keyFrameSize.y));
+
+		this->keyFrameDuration = 0.0f;
+
 	}
+
 }
 
 void Player::updateMovementBounds(int left, int right, int top, int bottom) {
@@ -114,8 +121,14 @@ void Player::updateMovementBounds(int left, int right, int top, int bottom) {
 
 }
 
-sf::Sprite& Player::getBody(void) {
+sf::Sprite Player::getBody(void) {
 
 	return this->spriteSheet;
+
+}
+
+void Player::newPosition(sf::Vector2f pos) {
+
+	this->spriteSheet.setPosition(pos);
 
 }

@@ -27,14 +27,17 @@ private:
 	sf::Vector2i keyFrameSize;
 
 	//self explanatory
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
 	Player();
 	Player(sf::Vector2f pos);
 
 	//Get
-	sf::Sprite& getBody(void);
+	sf::Sprite getBody(void);
+
+	//Set
+	void newPosition(sf::Vector2f pos);
 
 	//Update
 	void update(float dt);
