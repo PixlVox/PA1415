@@ -7,6 +7,8 @@ Inventory::Inventory(){
 	this->invSprite.setTexture(this->invTexture);
 	this->invSprite.setTextureRect(sf::IntRect(0, 0, 128, 384));
 
+	this->items = new Item*[3];
+
 	//set position
 	this->xPos = 32.0f;
 	this->yPos = 32.0f;
@@ -14,74 +16,71 @@ Inventory::Inventory(){
 
 }
 
-void Inventory::update(float dt){
+Inventory::~Inventory() {
 
+	for (int i = 0; i < 3; i++) {
 
+		if (this->items[i] != nullptr) {
+
+			delete this->items[i];
+
+		}
+
+	}
+
+	delete[] this->items;
 
 }
 
-void Inventory::addItem(Item &item){
+void Inventory::addItem(){
 
 	if (this->nrOfItems < 3) {
-		this->items[this->nrOfItems] = item;
-		this->items[this->nrOfItems].setIsOnFloor(false);
-		this->items[this->nrOfItems].setPosition(64, 64 * this->nrOfItems);
+
+		this->items[this->nrOfItems] = new Item();
+		this->items[this->nrOfItems]->setPosition(45, ((64 * (this->nrOfItems * 2)) + 50));
+		this->items[this->nrOfItems]->setScale(sf::Vector2f(3.0f, 3.0f));
 		this->nrOfItems++;
 
 	}
-	else {
 
-		//Inventory is full.
+}
+
+int Inventory::getNrOfItems() const{
 	
-	}
-
-}
-
-int Inventory::getNrOfItems()
-{
 	return this->nrOfItems;
+
 }
 
-void Inventory::emptyInventory()
-{
-	this->nrOfItems = 0;
+bool Inventory::isFull(void) const{
+
+	return this->nrOfItems == 3;
+
 }
 
-sf::Sprite & Inventory::getItemBodies(int index)
-{
-	return this->items[index].getBody();
-}
+void Inventory::dropItem(){
 
-Item & Inventory::dropItem()
-{
 	if (this->nrOfItems > 0) {
+
+		delete this->items[this->nrOfItems - 1];
+		this->items[this->nrOfItems - 1] = nullptr;
 		this->nrOfItems--;
-		return this->items[this->nrOfItems - 1];
+
 	}
-	else {
-		return Item();
-	}
+
 }
 
-Item & Inventory::dropItem(int index)
-{
-	if (this->nrOfItems > index) {
-		this->nrOfItems--;
-		return this->items[index];
-	}
-	else {
-		return Item();
-	}
-}
+void Inventory::drawInventory(sf::RenderWindow& window) {
 
-void Inventory::draw(sf::RenderTarget & target, sf::RenderStates states) const{
-
-	target.draw(this->invSprite, states);
-
+	window.draw(this->invSprite);
+	
 	for (int i = 0; i < this->nrOfItems; i++) {
 
-		target.draw(this->items[i], states);
-	
+		if (this->items[i] != nullptr) {
+
+			window.draw(this->items[i]->getBody());
+
+		}
+
 	}
 
 }

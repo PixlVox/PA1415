@@ -1,10 +1,10 @@
 ﻿  GameHandler.cpp
-GameHandler.cpp(158): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-GameHandler.cpp(159): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+GameHandler.cpp(186): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+GameHandler.cpp(187): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Generating code
-  0 of 258 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  38 of 261 functions (14.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    21 functions had inline decision re-evaluated but remain unchanged
+    55 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Release\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Release\NewTwitterNethack.pdb (Full PDB)

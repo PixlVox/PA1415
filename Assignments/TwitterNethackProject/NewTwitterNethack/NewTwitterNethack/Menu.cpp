@@ -1,5 +1,4 @@
 #include "Menu.h"
-#include <iostream>
 
 Menu::Menu(){
 
@@ -83,8 +82,6 @@ int Menu::detectKey(float deltaTime){
 		this->menuTimer = 0.0f;
 
 	}
-
-	std::cout << "Current: " << option << std::endl;
 
 	return option;
 

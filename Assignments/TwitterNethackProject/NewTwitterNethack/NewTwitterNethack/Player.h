@@ -3,8 +3,8 @@
 #include"Inventory.h"
 #include"SFML\Graphics.hpp"
 
-class Player : public sf::Drawable
-{
+class Player {
+
 private:
 
 	//Texture stuff
@@ -14,6 +14,7 @@ private:
 
 	//Inventory stuff
 	Inventory inventory;
+	float dropTimer;
 
 	//Player movement
 	sf::Vector2f velocity;
@@ -29,21 +30,17 @@ private:
 	sf::Vector2i currentKeyFrame;
 	sf::Vector2i keyFrameSize;
 
-	//self explanatory
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
 public:
 
 	Player(sf::Vector2f pos);
 
 	//Get
-	sf::Sprite &getBody(void);
+	sf::Sprite getBody(void);
 
 	//Inventory
-	Inventory &getPlayerInventory();
-	void addItemInInventory(Item &item);
-	Item& dropItemFromInventory();
-	Item& dropItemFromInventory(int index);
+	void addItemInInventory();
+	void dropItemFromInventory(float deltaTime);
+	bool fullInventory(void) const;
 
 	//Set
 	void newPosition(sf::Vector2f pos);
@@ -51,6 +48,8 @@ public:
 	//Update
 	void update(float dt);
 	void updateMovementBounds(int left, int right, int top, int bottom);
+
+	void drawPlayerAndInventory(sf::RenderWindow& window);
 
 };
 #endif // !PLAYER_H

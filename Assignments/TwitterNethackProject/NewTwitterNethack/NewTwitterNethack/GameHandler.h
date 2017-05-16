@@ -14,9 +14,6 @@ private:
 	Player* player;
 	Menu menu;
 
-	//Item/Inventory
-	Item bitchBall;
-
 	sf::Vector2i playerCurrentPos;
 	int** tileMap;
 	bool showMenu;
@@ -25,6 +22,7 @@ private:
 	//Private functions
 	void reset();
 	bool updatePortalCollision();
+	void itemCollision(void);
 	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();
 	void updatePlayerBounds(void);

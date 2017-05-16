@@ -1,5 +1,4 @@
 #include "GameHandler.h"
-#include <iostream>
 
 GameHandler::GameHandler(){
 
@@ -53,11 +52,37 @@ void GameHandler::draw(sf::RenderTarget &target, sf::RenderStates states) const{
 void GameHandler::drawObjects(sf::RenderWindow& window) {
 
 	this->room->drawObjects(window);
-	window.draw(this->player->getBody());
+
+	this->player->drawPlayerAndInventory(window);
 
 	if (this->showMenu) {
 
 		this->menu.drawButtons(window);
+
+	}
+
+}
+
+void GameHandler::itemCollision(void) {
+
+	for (int i = 0; i < this->room->getNrOfItems(); i++) {
+
+		if (this->room->getItems()[i] != nullptr) {
+
+			if (this->player->getBody().getGlobalBounds().intersects(this->room->getItems()[i]->getBody().getGlobalBounds())) {
+
+				if (!this->player->fullInventory()) {
+
+					delete this->room->getItems()[i];
+					this->room->getItems()[i] = nullptr;
+					this->player->addItemInInventory();
+
+
+				}
+
+			}
+
+		}
 
 	}
 
@@ -118,6 +143,9 @@ int GameHandler::update(float dt) {
 
 		//Update player
 		this->player->update(dt);
+
+		//Check for collision with items
+		this->itemCollision();
 
 		//Update the players movement bounds
 		this->updatePlayerBounds();

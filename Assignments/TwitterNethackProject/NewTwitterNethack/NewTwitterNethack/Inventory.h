@@ -5,33 +5,34 @@
 
 static const int inventory_space = 3;
 
-class Inventory : sf::Drawable {
+class Inventory {
 
 private:
 
+	//Inventory slots
 	sf::Sprite invSprite;
 	sf::Texture invTexture;
-	Item items[inventory_space];
+
+	//Item Array
+	Item** items;
+	
+	//Item variables
 	int nrOfItems;
 	float xPos;
 	float yPos;
 
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
 public:
 
 	Inventory();
-	void update(float dt);
-	void addItem(Item &item);
+	~Inventory();
+
+	void addItem();
+	void dropItem();
 	
-	int getNrOfItems();
+	int getNrOfItems(void) const;
+	bool isFull(void) const;
 
-	void emptyInventory();
-
-	sf::Sprite& getItemBodies(int index);
-
-	Item &dropItem();
-	Item &dropItem(int index);
+	void drawInventory(sf::RenderWindow& window);
 
 };
 #endif // !INVENTORY_H

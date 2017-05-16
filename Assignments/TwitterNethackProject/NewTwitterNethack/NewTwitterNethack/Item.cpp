@@ -5,6 +5,7 @@ Item::Item() {
 	//set Texture
 	this->itemTexture.loadFromFile("Textures//Items//bathumball.png");
 	this->itemSprite.setTexture(this->itemTexture);
+	this->itemSprite.setPosition(sf::Vector2f(0.0f, 0.0f));
 
 	//set position
 	this->xPos = -100.0f;
@@ -24,9 +25,6 @@ Item::Item(sf::Vector2f walkableTile){
 	this->xPos = walkableTile.x + 16;
 	this->yPos = walkableTile.y + 16;
 	this->itemSprite.setPosition(xPos, yPos);
-	
-	//set properties
-	this->isOnFloor = true;
 
 }
 
@@ -40,9 +38,6 @@ Item::Item(sf::Vector2f walkableTile, bool isOnFloor){
 	this->xPos = walkableTile.x + 16;
 	this->yPos = walkableTile.y + 16;
 	this->itemSprite.setPosition(xPos, yPos);
-
-	//set properties
-	this->isOnFloor = isOnFloor;
 
 }
 
@@ -64,20 +59,14 @@ sf::Vector2f Item::getPosition(){
 
 }
 
-void Item::setIsOnFloor(bool isOnFloor){
-
-	this->isOnFloor = isOnFloor;
-
-}
-
-void Item::draw(sf::RenderTarget & target, sf::RenderStates states) const{
-
-	target.draw(this->itemSprite, states);
-
-}
-
-sf::Sprite& Item::getBody(void) {
+sf::Sprite Item::getBody(void) {
 
 	return this->itemSprite;
+
+}
+
+void Item::setScale(sf::Vector2f scale) {
+
+	this->itemSprite.setScale(scale);
 
 }

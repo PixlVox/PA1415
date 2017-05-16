@@ -1,24 +1,10 @@
 #include "Player.h"
-#include<iostream>
-
-void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const{
-
-	target.draw(this->spriteSheet, states);
-
-}
 
 Player::Player(sf::Vector2f pos){
 
 	//character sprite location
 	sf::String fileName = "../NewTwitterNethack/Textures/Characters/player1.png";
-
-	// Load texture, set it to the sprite and set what part of the sprite sheet to draw.
-	if (!this->texture.loadFromFile(fileName)){
-
-		// Handle error: Print error message.
-		std::cout << "ERROR: Player image could not be loaded.\n---" << std::endl;
-	
-	}
+	this->texture.loadFromFile(fileName);
 
 	this->spriteSheet.setTexture(texture);
 	this->spriteSheet.setTextureRect(sf::IntRect(0, 0, 32, 32));
@@ -34,6 +20,8 @@ Player::Player(sf::Vector2f pos){
 	this->movementBoundLeft = 0;
 	this->movementBoundRight = 0;
 	this->movementBoundUp = 0;
+
+	this->dropTimer = 0.0f;
 
 }
 
@@ -110,6 +98,9 @@ void Player::update(float dt){
 
 	}
 
+	//Drop Item
+	this->dropItemFromInventory(dt);
+
 }
 
 void Player::updateMovementBounds(int left, int right, int top, int bottom) {
@@ -121,40 +112,50 @@ void Player::updateMovementBounds(int left, int right, int top, int bottom) {
 
 }
 
-sf::Sprite &Player::getBody(void) {
+sf::Sprite Player::getBody(void) {
 
 	return this->spriteSheet;
 
 }
 
-Inventory & Player::getPlayerInventory()
-{
-	return this->inventory;
+void Player::addItemInInventory(){
+
+	this->inventory.addItem();
+
 }
 
-void Player::addItemInInventory(Item & item)
-{
-	this->inventory.addItem(item);
+bool Player::fullInventory(void) const{
+
+	return this->inventory.isFull();
+
 }
 
-Item & Player::dropItemFromInventory()
-{
-	Item thisItem = inventory.dropItem();
-	thisItem.setPosition(spriteSheet.getPosition().x, spriteSheet.getPosition().y + 64);
-	thisItem.setIsOnFloor(true);
-	return thisItem;
-}
+void Player::dropItemFromInventory(float deltaTime) {
 
-Item & Player::dropItemFromInventory(int index)
-{
-	Item thisItem = inventory.dropItem(index);
-	thisItem.setPosition(spriteSheet.getPosition().x, spriteSheet.getPosition().y + 64);
-	thisItem.setIsOnFloor(true);
-	return thisItem;
+	this->dropTimer += deltaTime;
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::O)) {
+
+		if (this->dropTimer >= 0.2f) {
+
+			this->inventory.dropItem();
+			this->dropTimer = 0.0f;
+
+		}
+
+	}
+
 }
 
 void Player::newPosition(sf::Vector2f pos) {
 
 	this->spriteSheet.setPosition(pos);
+
+}
+
+void Player::drawPlayerAndInventory(sf::RenderWindow& window) {
+
+	this->inventory.drawInventory(window);
+	window.draw(this->spriteSheet);
 
 }

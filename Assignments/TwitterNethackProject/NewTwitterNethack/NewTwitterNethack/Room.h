@@ -27,7 +27,7 @@ private:
 
 	//Objects
 	Portal* portal;
-	Item* items;
+	Item** items;
 
 	//Item Varaibles
 	int nrOfItems;
@@ -56,9 +56,12 @@ public:
 	sf::Vector2f getRandomWalkableTile(void) const;
 	sf::RectangleShape getPortal(void) const;
 	sf::Vector2i getTileSize(void) const;
+	Item** getItems(void) const;
+	int getNrOfItems(void) const;
 
 	//Update
 	void updateSprites(float deltaTime);
+	void updateItems(bool update);
 
 	//Misc
 	void drawObjects(sf::RenderWindow& window);
