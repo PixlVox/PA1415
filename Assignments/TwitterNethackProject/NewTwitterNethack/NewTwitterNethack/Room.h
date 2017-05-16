@@ -30,7 +30,7 @@ private:
 	Item* items;
 
 	//Private functions
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 	//Calls on every other setup function(private functions below)
 	void createRoom(void);
@@ -48,10 +48,11 @@ public:
 	~Room();
 
 	//Get
-	int** getTileMap(void);
-	sf::Vector2i getNrOfTiles(void);
-	sf::Vector2f getRandomWalkableTile(void);
-	sf::RectangleShape getPortal(void);
+	int** getTileMap(void) const;
+	sf::Vector2i getNrOfTiles(void) const;
+	sf::Vector2f getRandomWalkableTile(void) const;
+	sf::RectangleShape getPortal(void) const;
+	sf::Vector2i getTileSize(void) const;
 
 	//Update
 	void updateSprites(float deltaTime);

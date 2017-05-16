@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Inventory.cpp
 c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\inventory.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Main.cpp
@@ -9,3 +10,12 @@ c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwit
 c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
   NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+=======
+﻿  Player.cpp
+  GameHandler.cpp
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.cpp(160): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\teemu\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\gamehandler.cpp(161): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+>>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
