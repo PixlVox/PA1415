@@ -20,6 +20,12 @@ Room::Room() {
 	this->portal = nullptr;
 	this->items = nullptr;
 
+	//Item variables
+	this->nrOfItems = rand() % 3 + 0;
+	this->items = new Item[this->nrOfItems];
+
+	std::cout << nrOfItems << std::endl;
+
 	this->createRoom();
 
 }
@@ -124,8 +130,13 @@ void Room::setupPortal(void) {
 }
 
 void Room::generateItems(void) {
+	
+	for (int i = 0; i < this->nrOfItems; i++) {
 
+		this->items[i].setIsOnFloor(true);
+		this->items[i].setPosition(this->getRandomWalkableTile());
 
+	}
 
 }
 
@@ -136,6 +147,7 @@ void Room::createRoom(void) {
 	this->generateTiles();
 	this->loadVertexArray();
 	this->setupPortal();
+	this->generateItems();
 
 }
 
@@ -158,6 +170,16 @@ void Room::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 void Room::drawObjects(sf::RenderWindow& window) {
 
 	window.draw(this->portal->getBody());
+	
+	if (this->items != nullptr) {
+
+		for (int i = 0; i < this->nrOfItems; i++) {
+
+			window.draw(this->items[i].getBody());
+
+		}
+
+	}
 
 }
 

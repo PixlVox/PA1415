@@ -25,9 +25,12 @@ private:
 	sf::Vector2i nrOfTiles;
 	sf::Vector2i tileSize;
 
-	//Obligatory Object
+	//Objects
 	Portal* portal;
 	Item* items;
+
+	//Item Varaibles
+	int nrOfItems;
 
 	//Private functions
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;

@@ -1,22 +1,30 @@
 #ifndef INVENTORY_H
 #define INVENTORY_H
+
 #include "Item.h"
+
 static const int inventory_space = 3;
+
 class Inventory : sf::Drawable {
-protected:
+
+private:
+
 	sf::Sprite invSprite;
 	sf::Texture invTexture;
 	Item items[inventory_space];
 	int nrOfItems;
 	float xPos;
 	float yPos;
+
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
 public:
+
 	Inventory();
 	void update(float dt);
 	void addItem(Item item);
 	//Item& dropItem();
 	//Item& dropItem(int index);
-private:
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
 };
 #endif // !INVENTORY_H

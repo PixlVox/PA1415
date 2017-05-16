@@ -70,28 +70,19 @@ void GameHandler::draw(sf::RenderTarget &target, sf::RenderStates states) const{
 		target.draw(this->menu, states);
 	
 	}
-<<<<<<< HEAD
-	else
-	{
-		target.draw(this->player, states);
-		target.draw(*this->rooms[this->currentRoom], states);
-		//Item/Inventory
-		target.draw(this->bitchBall, states);
-=======
 	else{
 
 		//target.draw(*this->player, states);
 		target.draw(*this->room, states);
 	
->>>>>>> 1f01b70561d2df786db3653f4c6c8cab082777ab
 	}
 
 }
 
 void GameHandler::drawObjects(sf::RenderWindow& window) {
 
-	window.draw(this->player->getBody());
 	this->room->drawObjects(window);
+	window.draw(this->player->getBody());
 
 }
 
