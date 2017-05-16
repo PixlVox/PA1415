@@ -10,29 +10,30 @@ Item::Item() {
 	this->xPos = 500.0f;
 	this->yPos = 500.0f;
 	this->itemSprite.setPosition(xPos, yPos);
+	this->itemSprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
 }
 
-Item::Item(float roomWidth, float roomHeight)
+Item::Item(sf::Vector2f walkableTile)
 {
 	//set Texture
 	this->itemTexture.loadFromFile("Textures//Items//bathumball.png");
 	this->itemSprite.setTexture(this->itemTexture);
 
-	//set position
-	this->xPos = roomWidth;
-	this->yPos = roomHeight;
+	//set position to the center of a walkable tile.
+	this->xPos = walkableTile.x + 16;
+	this->yPos = walkableTile.y + 16;
 	this->itemSprite.setPosition(xPos, yPos);
 }
 
-Item::Item(float roomWidth, float roomHeight, bool isOnFloor)
+Item::Item(sf::Vector2f walkableTile, bool isOnFloor)
 {
 	//set Texture
 	this->itemTexture.loadFromFile("Textures//Items//bathumball.png");
 	this->itemSprite.setTexture(this->itemTexture);
 
-	//set position
-	this->xPos = roomWidth;
-	this->yPos = roomHeight;
+	//set position to the center of a walkable tile.
+	this->xPos = walkableTile.x + 16;
+	this->yPos = walkableTile.y + 16;
 	this->itemSprite.setPosition(xPos, yPos);
 
 	//set properties
