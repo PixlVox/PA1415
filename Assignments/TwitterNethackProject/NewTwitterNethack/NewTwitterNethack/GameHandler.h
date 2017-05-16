@@ -20,13 +20,10 @@ private:
 	sf::Vector2i playerCurrentPos;
 	int** tileMap;
 	bool showMenu;
-	int menuAnswer;
+	float menuTimer;
 
 	//Private functions
 	void reset();
-
-	void dueMenu(int nr);
-
 	bool updatePortalCollision();
 	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();
@@ -38,7 +35,7 @@ public:
 	GameHandler();
 
 	//Update
-	void update(float dt);
+	int update(float dt);
 	void updateSprites(float deltaTime);
 
 	//Draw

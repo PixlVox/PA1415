@@ -3,23 +3,26 @@
 
 #include<SFML\Graphics.hpp>
 
-class Menu : public sf::Drawable
-{
+class Menu {
+
 private:
-	sf::Texture menuTexture;
-	sf::Sprite menuSprite[2];
-	sf::RectangleShape background;
+
+	sf::Texture exitTexture;
+	sf::Texture startTexture;
+	sf::Texture highlightTexture;
+	sf::Sprite menuSprite[3];
 	int current;
-	int done;
+	float menuTimer;
 
-	void detectKey();
-	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
-protected:
-
+	sf::RectangleShape transparency;
 
 public:
+
 	Menu();
-	int update();
+
+	int detectKey(float deltaTime);
+
+	void drawButtons(sf::RenderWindow& window);
 
 };
 #endif // !MENU_H
