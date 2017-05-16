@@ -33,18 +33,15 @@ void GameHandler::reset(){
 
 }
 
-void GameHandler::dueMenu(){
-
-	if (this->menuAnswer != -1){
-
-		if (this->menuAnswer){
-
+void GameHandler::dueMenu(int nr)
+{
+	if (nr != -1)
+	{
+		if (nr)
+		{
 			this->reset();
-		
-		}
-		
+		}	
 		this->showMenu = false;
-	
 	}
 }
 
@@ -70,11 +67,21 @@ void GameHandler::draw(sf::RenderTarget &target, sf::RenderStates states) const{
 		target.draw(this->menu, states);
 	
 	}
+<<<<<<< HEAD
 	else{
 
 		//target.draw(*this->player, states);
 		target.draw(*this->room, states);
 	
+=======
+	else
+	{
+
+		//Item/Inventory
+		target.draw(this->bitchBall, states);
+		//target.draw(*this->player, states);
+		target.draw(*this->room, states);
+>>>>>>> 5129f5d5786642ca1c0fd7cb2705288b74f735ee
 	}
 
 }
@@ -98,20 +105,20 @@ void GameHandler::detectKey(){
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && !this->showMenu){
 
-		//this->showMenu = true;
+		this->showMenu = true;
 
 	}
 }
 
-void GameHandler::update(float dt)
-{
+void GameHandler::update(float dt) {
 	if (this->showMenu) {
 
 		//Update menu if it's open
 		this->menuAnswer = this->menu.update();
 
 	}
-	else{
+	else
+	{
 
 		//Open menu(Check for input)
 		this->detectKey();
@@ -123,17 +130,17 @@ void GameHandler::update(float dt)
 		this->updatePlayerBounds();
 
 		//Check for collision with the portal
-		if (this->updatePortalCollision()) {
+			if (this->updatePortalCollision())
+			{
 
-			this->player->newPosition(this->room->getRandomWalkableTile());
+				this->player->newPosition(this->room->getRandomWalkableTile());
 
-		}
-
+			}
 	}
-
 }
 
-void GameHandler::generateRoom(){
+void GameHandler::generateRoom()
+{
 
 	if (this->room != nullptr) {
 

@@ -24,7 +24,9 @@ private:
 
 	//Private functions
 	void reset();
-	void dueMenu();
+
+	void dueMenu(int nr);
+
 	bool updatePortalCollision();
 	void draw(sf::RenderTarget &target, sf::RenderStates states)const;
 	void detectKey();
