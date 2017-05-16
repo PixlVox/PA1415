@@ -7,8 +7,8 @@ Item::Item() {
 	this->itemSprite.setTexture(this->itemTexture);
 
 	//set position
-	this->xPos = 500.0f;
-	this->yPos = 500.0f;
+	this->xPos = -100.0f;
+	this->yPos = -100.0f;
 	this->itemSprite.setPosition(xPos, yPos);
 	this->itemSprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
 
@@ -24,6 +24,9 @@ Item::Item(sf::Vector2f walkableTile){
 	this->xPos = walkableTile.x + 16;
 	this->yPos = walkableTile.y + 16;
 	this->itemSprite.setPosition(xPos, yPos);
+	
+	//set properties
+	this->isOnFloor = true;
 
 }
 
@@ -73,7 +76,7 @@ void Item::draw(sf::RenderTarget & target, sf::RenderStates states) const{
 
 }
 
-sf::Sprite Item::getBody(void) {
+sf::Sprite& Item::getBody(void) {
 
 	return this->itemSprite;
 

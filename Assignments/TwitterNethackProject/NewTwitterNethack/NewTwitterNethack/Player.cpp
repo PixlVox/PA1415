@@ -121,10 +121,36 @@ void Player::updateMovementBounds(int left, int right, int top, int bottom) {
 
 }
 
-sf::Sprite Player::getBody(void) {
+sf::Sprite &Player::getBody(void) {
 
 	return this->spriteSheet;
 
+}
+
+Inventory & Player::getPlayerInventory()
+{
+	return this->inventory;
+}
+
+void Player::addItemInInventory(Item & item)
+{
+	this->inventory.addItem(item);
+}
+
+Item & Player::dropItemFromInventory()
+{
+	Item thisItem = inventory.dropItem();
+	thisItem.setPosition(spriteSheet.getPosition().x, spriteSheet.getPosition().y + 64);
+	thisItem.setIsOnFloor(true);
+	return thisItem;
+}
+
+Item & Player::dropItemFromInventory(int index)
+{
+	Item thisItem = inventory.dropItem(index);
+	thisItem.setPosition(spriteSheet.getPosition().x, spriteSheet.getPosition().y + 64);
+	thisItem.setIsOnFloor(true);
+	return thisItem;
 }
 
 void Player::newPosition(sf::Vector2f pos) {
