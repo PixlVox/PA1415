@@ -13,7 +13,10 @@ protected:
 public:
 	Inventory();
 	void update(float dt);
-	void addItem(Item item);
+	void addItem(Item &item);
+	int getNrOfItems();
+	sf::Sprite& getItemBodies(int index);
+
 	//Item& dropItem();
 	//Item& dropItem(int index);
 private:

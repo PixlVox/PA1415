@@ -18,7 +18,7 @@ void Inventory::update(float dt)
 
 }
 
-void Inventory::addItem(Item item)
+void Inventory::addItem(Item &item)
 {
 	if (this->nrOfItems < 3) {
 		this->items[this->nrOfItems] = item;
@@ -29,6 +29,16 @@ void Inventory::addItem(Item item)
 	else {
 		//Inventory is full.
 	}
+}
+
+int Inventory::getNrOfItems()
+{
+	return this->nrOfItems;
+}
+
+sf::Sprite & Inventory::getItemBodies(int index)
+{
+	return this->items[index].getBody();
 }
 
 void Inventory::draw(sf::RenderTarget & target, sf::RenderStates states) const
