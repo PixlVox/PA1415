@@ -1,3 +1,11 @@
-﻿  Player.cpp
-  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
-  NewTwitterNethack.vcxproj -> C:\Users\Teemu\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)
+﻿  Inventory.cpp
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\inventory.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(170): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(171): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(189): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\noah1\documents\github\pa1415\assignments\twitternethackproject\newtwitternethack\newtwitternethack\main.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.exe
+  NewTwitterNethack.vcxproj -> C:\Users\Noah1\Documents\GitHub\PA1415\Assignments\TwitterNethackProject\NewTwitterNethack\Debug\NewTwitterNethack.pdb (Partial PDB)

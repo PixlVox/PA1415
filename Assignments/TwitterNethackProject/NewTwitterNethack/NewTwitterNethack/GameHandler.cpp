@@ -45,6 +45,8 @@ void GameHandler::draw(sf::RenderTarget &target, sf::RenderStates states) const
 	{
 		target.draw(this->player, states);
 		target.draw(*this->rooms[this->currentRoom], states);
+		//Item/Inventory
+		target.draw(this->bitchBall, states);
 	}
 }
 
@@ -64,6 +66,8 @@ GameHandler::GameHandler()
 	this->generateRoom();
 	this->setPlayerPos();
 
+	//Item/Inventory
+	this->bitchBall = Item();
 }
 
 void GameHandler::update(float dt)
